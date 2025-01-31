@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1:1 Online Tuition</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="../icons/notes.svg" alt="CBSE">
+            <h1>Sri Academics</h1>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="content">
+            <h1>1:1 Online Tuition</h1>
+            <p>Personalised maths and English tuition delivered by inspiring, professional tutors.</p>
+            <div class="demo-form">
+                <h2>Book Your FREE DEMO</h2>
+                <form id="freeTrialForm">
+                    <div class="form-row">
+                        <input type="text" id="name" placeholder="*Name" required>
+                        <input type="email" id="email" placeholder="*Email" required>
+                    </div>
+                    <input type="tel" id="phone" placeholder="*Phone Number" required>
+                    <div class="form-row">
+                        <select id="board" required>
+                            <option value="" disabled selected>Board</option>
+                            <option value="cbse">CBSE</option>
+                            <option value="icse">ICSE</option>
+                            <option value="state">State Board</option>
+                        </select>
+                        <select id="grade" required>
+                            <option value="" disabled selected>Grade</option>
+                            <option value="8">8th</option>
+                            <option value="9">9th</option>
+                            <option value="10">10th</option>
+                            <option value="11">11th</option>
+                            <option value="12">12th</option>
+                        </select>
+                    </div>
+                        <button type="submit">Book Your FREE DEMO</button>
+                    </div>
+                </form>
+                <div id="clickPrompt" style="display: none; color: white; margin-top: 10px;"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="commitment-section">
+        <h2>The Tutoroot Commitment to Students</h2>
+        <div class="commitment-content">
+            <div class="student-image">
+                <img src="../icons/bb.svg" alt="Smiling student">
+            </div>
+            <div class="commitment-points">
+                <div class="commitment-point">
+                    <span class="point-icon"></span>
+                    <p>We complement conventional classroom training, focusing on the formative growth of the student</p>
+                </div>
+                <div class="commitment-point">
+                    <span class="point-icon"></span>
+                    <p>We offer excellent faculty from top institutions and contemporary teaching methods</p>
+                </div>
+                <div class="commitment-point">
+                    <span class="point-icon"></span>
+                    <p>We conduct assessments, reviews, PTM, tests and analyse skills and limitations</p>
+                </div>
+                <div class="commitment-point">
+                    <span class="point-icon"></span>
+                    <p>We prepare students for long-term career with a focus on attitude and aptitude</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="programs-section">
+        <h2>Programs</h2>
+        <div class="programs-grid">
+            <div class="program-card" style="background-color: #FFA500;">
+                <img src="../icons/notes.svg" alt="CBSE">
+                <h3>CBSE</h3>
+                <p>8th - 12th</p>
+            </div>
+            <div class="program-card" style="background-color: #FFB700;">
+                <img src="../icons/notes.svg" alt="ICSE">
+                <h3>ICSE</h3>
+                <p>8th - 10th</p>
+            </div>
+            <div class="program-card" style="background-color: #FFC800;">
+                <img src="../icons/notes.svg" alt="IGCSE IBDP">
+                <h3>IGCSE IBDP</h3>
+                <p>8th - 12th</p>
+            </div>
+            <div class="program-card" style="background-color: #FFD700;">
+                <img src="../icons/notes.svg" alt="State Board">
+                <h3>State Board</h3>
+                <p>8th - 12th</p>
+            </div>
+            <div class="program-card" style="background-color: #FFE600;">
+                <img src="../icons/notes.svg" alt="Foundation">
+                <h3>Foundation</h3>
+                <p>8th - 12th</p>
+            </div>
+            <div class="program-card" style="background-color: #FFF500;">
+                <img src="../icons/notes.svg" alt="JEE/NEET">
+                <h3>JEE/NEET</h3>
+                <p>11th - 12th</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="video-section">
+        <div class="video-container">
+            <h2>Watch Our Introduction Video</h2>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/your-video-id" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section class="benefits-section">
+        <h2>Benefits Of Online Tutoring In Vnaya</h2>
+        <div class="benefits-grid">
+            <div class="benefit-item">
+                <div class="benefit-icon">
+                    <img src="../icons/book.svg" alt="Counselor Icon">
+                </div>
+                <p class="benefit-text">Dedicated Academic Counselor</p>
+            </div>
+            <div class="benefit-item">
+                <div class="benefit-icon">
+                    <img src="../icons/book.svg" alt="Curriculum Icon">
+                </div>
+                <p class="benefit-text">Customized Session As Per Individual Board/Curriculum</p>
+            </div>
+            <div class="benefit-item">
+                <div class="benefit-icon">
+                    <img src="../icons/book.svg" alt="Parenting Icon">
+                </div>
+                <p class="benefit-text">Learning Leaders For Free Parenting Counseling</p>
+            </div>
+            <div class="benefit-item">
+                <div class="benefit-icon">
+                    <img src="../icons/book.svg" alt="Report Card Icon">
+                </div>
+                <p class="benefit-text">Monthly Report Cards For Parents</p>
+            </div>
+            <div class="benefit-item">
+                <div class="benefit-icon">
+                    <img src="../icons/book.svg" alt="Assessment Icon">
+                </div>
+                <p class="benefit-text">Weekly Online Assessments And Evaluations</p>
+            </div>
+            <div class="benefit-item">
+                <div class="benefit-icon">
+                    <img src="../icons/book.svg" alt="Learning Style Icon">
+                </div>
+                <p class="benefit-text">Natural Learning Style Methodology Adopted</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials-section">
+        <h2>Student's Testimonials</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-image">
+                    <img src="../icons/testtube.svg" alt="Sai Shreya">
+                </div>
+                <h3 class="testimonial-name">Student 1</h3>
+                <p class="testimonial-grade">Grade: 8 | CBSE NEET</p>
+                <p class="testimonial-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-image">
+                    <img src="../icons/testtube.svg" alt="Pradeep Krupanandan">
+                </div>
+                <h3 class="testimonial-name">Student 2</h3>
+                <p class="testimonial-grade">Grade: 3 | CBSE, NEET</p>
+                <p class="testimonial-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-image">
+                    <img src="../icons/testtube.svg" alt="Mishika">
+                </div>
+                <h3 class="testimonial-name">Student 3</h3>
+                <p class="testimonial-grade">Grade: 10 | CBSE, IIT-JEE</p>
+                <p class="testimonial-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-image">
+                    <img src="../icons/testtube.svg" alt="Pranavi Reddy">
+                </div>
+                <h3 class="testimonial-name">Student 4</h3>
+                <p class="testimonial-grade">Grade: 7 | CBSE NEET</p>
+                <p class="testimonial-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-image">
+                    <img src="../icons/testtube.svg" alt="Sabarish R">
+                </div>
+                <h3 class="testimonial-name">Student 5</h3>
+                <p class="testimonial-grade">Grade: 9 | CBSE Board</p>
+                <p class="testimonial-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-image">
+                    <img src="../icons/testtube.svg" alt="Zarka Khan">
+                </div>
+                <h3 class="testimonial-name">Student 6</h3>
+                <p class="testimonial-grade">Grade: 12 | CBSE</p>
+                <p class="testimonial-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <h2>Frequently asked questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    Can I choose between Hindi and English language while selecting batches?
+                    <span class="faq-toggle">&#9660;</span>
+                </div>
+                <div class="faq-answer">
+                    Yes, we offer classes in both Hindi and English. You can select your preferred language when choosing your batch.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    Can I change teacher if I am not able to understand?
+                    <span class="faq-toggle">&#9660;</span>
+                </div>
+                <div class="faq-answer">
+                    Yes, we understand that different teaching styles work for different students. If you're having difficulty, please contact our support team, and we'll arrange a different teacher for you.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    Will I get class notes and assignments?
+                    <span class="faq-toggle">&#9660;</span>
+                </div>
+                <div class="faq-answer">
+                    Yes, every class has assignments linked to it. Class notes can be downloaded right after the class is over.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    Will I get study material for practice?
+                    <span class="faq-toggle">&#9660;</span>
+                </div>
+                <div class="faq-answer">
+                    Yes, we provide comprehensive study materials for practice, including worksheets, practice problems, and additional resources to reinforce your learning.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    Can I choose class timings as per my convenience?
+                    <span class="faq-toggle">&#9660;</span>
+                </div>
+                <div class="faq-answer">
+                    We offer flexible scheduling options. You can choose from a variety of time slots that best fit your schedule. If you need a specific timing, please contact our support team, and we'll do our best to accommodate your request.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    Will I get a test series?
+                    <span class="faq-toggle">&#9660;</span>
+                </div>
+                <div class="faq-answer">
+                    Yes, we provide a comprehensive test series as part of our curriculum. These tests help you assess your progress and prepare for your exams effectively.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="copyright">
+                © 2024.Vedantu.com. All rights reserved
+            </div>
+            <div class="footer-links">
+                <a href="privacy.html" target="_blank">Privacy policy</a>
+                <a href="terms.html" target="_blank">Terms and conditions</a>
+            </div>
+            <div class="social-icons">
+                <a href="https://wa.me/918889857170?text=interested" target="_blank" class="social-icon"><img src="../icons/whatsapp.svg" alt="WhatsApp"></a>
+                <a href="#" class="social-icon"><img src="../icons/linkedin.svg" alt="LinkedIn"></a>
+                <a href="https://www.instagram.com/pandeymanan024" target="_blank" class="social-icon"><img src="../icons/instagram.svg" alt="Instagram"></a>
+                <a href="#" class="social-icon"><img src="../icons/youtube.svg" alt="YouTube"></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="app.js"></script>
+
+    <div id="clickPrompt" style="display: none; color: white; margin-top: 10px;"></div>
+
+</body>
+</html>
