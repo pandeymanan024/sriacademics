@@ -23,10 +23,9 @@
       "ts-jest": "^29.1.1"
     },
     "scripts": {
-      "start": "react-scripts start",
-      "build": "react-scripts build",
-      "test": "jest",
-      "eject": "react-scripts eject"
+      "start": "node public/app.js",
+      "build": "echo 'No build step needed for plain JS'",
+      "test": "jest"
     },
     "eslintConfig": {
       "extends": [
