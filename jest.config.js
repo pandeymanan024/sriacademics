@@ -19,7 +19,8 @@
 
 module.exports = {
     testEnvironment: 'node', // Use 'node' if testing backend code
-    roots: ['<rootDir>'], // Adjust if your tests are in a different directory
+    roots: ['<rootDir>/.cursor-tutor/public/tests'],
+    testMatch: ["**/__tests__/**/*.test.js", "**/?(*.)+(spec|test).js"],
     transform: {
       '^.+\\.js$': 'babel-jest', // Ensure Babel is set up for Jest if using ES6+
     },

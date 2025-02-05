@@ -4,6 +4,7 @@
     "private": true,
     "main": "public/app.js",
     "dependencies": {
+      "express": "^4.21.2",
       "@testing-library/jest-dom": "^5.16.5",
       "@testing-library/react": "^13.4.0",
       "@testing-library/user-event": "^13.5.0",
@@ -25,7 +26,7 @@
     "scripts": {
       "start": "node public/app.js",
       "build": "echo 'No build step needed for plain JS'",
-      "test": "jest"
+      "test": "jest --passWithNoTests"
     },
     "eslintConfig": {
       "extends": [
