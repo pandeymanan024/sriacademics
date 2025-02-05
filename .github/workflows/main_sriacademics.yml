@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy Node.js app to Azure Web App - sriacademics
+name: Build and Deploy Node.js App to Azure Web App - sriacademics
 
 on:
   push:
@@ -11,27 +11,30 @@ on:
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest  # Changed to Ubuntu for consistency (Windows not needed)
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - name: Set up Node.js version
+      - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '20.x'
 
-      - name: npm install, build, and test
+      - name: Install dependencies, build, and test
         run: |
           npm install
           npm run build --if-present
-          npm run test --if-present
+          npm test --if-present
 
-      - name: Upload artifact for deployment job
+      - name: Upload artifact for deployment
         uses: actions/upload-artifact@v4
         with:
           name: node-app
-          path: .
+          path: |
+            .  # Ensure correct packaging for deployment
+            !node_modules  # Exclude unnecessary files
 
   deploy:
     runs-on: ubuntu-latest
@@ -46,7 +49,7 @@ jobs:
         with:
           name: node-app
 
-      - name: 'Deploy to Azure Web App'
+      - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v4
         id: deploy-to-webapp
         with:
