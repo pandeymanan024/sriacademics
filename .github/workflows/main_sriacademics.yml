@@ -11,7 +11,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest  # Changed to Ubuntu for consistency (Windows not needed)
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
@@ -33,7 +33,7 @@ jobs:
         with:
           name: node-app
           path: |
-            .  # Ensure correct packaging for deployment
+            public/  # Upload only the public directory where index.html and app.js are
             !node_modules  # Exclude unnecessary files
 
   deploy:
@@ -48,6 +48,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: node-app
+          path: public/  # Ensure artifacts are downloaded to the correct location
 
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v3
@@ -56,4 +57,4 @@ jobs:
           app-name: 'sriacademics'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_A4F0F513DAF1484896296748B3E37021 }}
-          package: .
+          package: public/
