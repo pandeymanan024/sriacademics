@@ -25,9 +25,10 @@ document.addEventListener('DOMContentLoaded', function() {
         const phone = document.getElementById("phone").value;
         const board = document.getElementById("board").value;
         const grade = document.getElementById("grade").value;
+        const countryCode = document.getElementById("countryCode").value;
 
         // Check if we're updating an existing message or adding a new one
-        checkEmailAndWrite(name, email, phone, board, grade);
+        checkEmailAndWrite(name, email, phone, board, grade, countryCode);
     }
 
     function checkEmailAndWrite(name, email, phone, board, grade) {
@@ -39,21 +40,22 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.getElementById("clickPrompt").style.display = "block";
             } else {
                 // Email doesn't exist, proceed with writing data
-                writeUserData(name, email, phone, board, grade);
+                writeUserData(name, email, phone, board, grade, countryCode);
                 document.getElementById("clickPrompt").textContent = "Registration successful!";
                 document.getElementById("clickPrompt").style.display = "block";
             }
         });
     }
 
-    function writeUserData(name, email, phone, board, grade) {
+    function writeUserData(name, email, phone, board, grade, countryCode) {
         // Use the Firebase SDK methods directly
         db.push({
           username: name,
           email: email,
           phone: phone,
           board: board,
-          grade: grade
+          grade: grade,
+          countryCode: countryCode
         });
     }
 
@@ -68,10 +70,10 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 
-    // country code selector
-    const countryCode = document.getElementById("countryCode");
-    countryCode.addEventListener("change", function() {
-        console.log(countryCode.value);
-    });
+    // // country code selector
+    // const countryCode = document.getElementById("countryCode");
+    // countryCode.addEventListener("change", function() {
+    //     console.log(countryCode.value);
+    // });
 
 });

@@ -38,6 +38,9 @@ body {
 
 .hero {
     background-color: #2F6B5D;
+    background-image: url('../src/icons/page1-background.svg');
+    background-size: cover;
+    background-position: center;
     color: white;
     padding: 50px 20px;
     text-align: center;
@@ -1017,4 +1020,18 @@ body {
 
 .faq-item.active .faq-toggle {
     transform: rotate(180deg);
+}
+
+#countryCode {
+    width: 30%; /* Adjust width as needed */
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 20px;
+    margin-right: 10px; /* Space between dropdown and phone input */
 }

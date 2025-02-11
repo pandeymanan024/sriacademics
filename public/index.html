@@ -9,7 +9,7 @@
 <body>
     <header class="header">
         <div class="logo">
-            <img src="../icons/notes.svg" alt="CBSE">
+            <img src="../src/icons/sri-academics-logo.svg" alt="CBSE">
             <h1>Sri Academics</h1>
         </div>
     </header>
@@ -25,7 +25,15 @@
                         <input type="text" id="name" placeholder="*Name" required>
                         <input type="email" id="email" placeholder="*Email" required>
                     </div>
-                    <input type="tel" id="phone" placeholder="*Phone Number" required>
+                    <div class="form-row">
+                        <select id="countryCode" required>
+                            <option value="+1">+1 (USA)</option>
+                            <option value="+91">+91 (India)</option>
+                            <option value="+44">+44 (UK)</option>
+                            <!-- Add more country codes as needed -->
+                        </select>
+                        <input type="tel" id="phone" placeholder="*Phone Number" required>
+                    </div>
                     <div class="form-row">
                         <select id="board" required>
                             <option value="" disabled selected>Board</option>
@@ -54,7 +62,7 @@
         <h2>The Tutoroot Commitment to Students</h2>
         <div class="commitment-content">
             <div class="student-image">
-                <img src="../icons/bb.svg" alt="Smiling student">
+                <img src="../src/icons/page1-background.svg" alt="Smiling student">
             </div>
             <div class="commitment-points">
                 <div class="commitment-point">
