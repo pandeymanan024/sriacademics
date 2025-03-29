@@ -76,4 +76,20 @@ document.addEventListener('DOMContentLoaded', function() {
     //     console.log(countryCode.value);
     // });
 
+    document.querySelector('.contact-btn').addEventListener('click', function() {
+        const dropdownContent = this.nextElementSibling;
+        dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(event) {
+        if (!event.target.matches('.contact-btn')) {
+            const dropdowns = document.getElementsByClassName('dropdown-content');
+            for (const dropdown of dropdowns) {
+                if (dropdown.style.display === 'block') {
+                    dropdown.style.display = 'none';
+                }
+            }
+        }
+    });
 });

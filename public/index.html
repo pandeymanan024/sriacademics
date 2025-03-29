@@ -9,60 +9,70 @@
 <body>
     <header class="header">
         <div class="logo">
-            <img src="../src/icons/sri-academics-logo.svg" alt="CBSE">
+            <img src="../public/src/icons/sri-academics-logo.svg" alt="CBSE">
             <h1>Sri Academics</h1>
+        </div>
+        
+        <div class="contact-dropdown">
+            <button class="contact-btn">Contact Us</button>
+            <div class="dropdown-content">
+                <a href="https://wa.me/your_number_here" target="_blank">
+                    <img src="../public/src/icons/whatsapp.svg" alt="WhatsApp">
+                    WhatsApp
+                </a>
+                <a href="mailto:your_email@example.com">
+                    <img src="../public/src/icons/email.svg" alt="Email">
+                    Email
+                </a>
+            </div>
         </div>
     </header>
 
     <section class="hero">
         <div class="content">
-            <h1>1:1 Online Tuition</h1>
-            <p>Personalised maths and English tuition delivered by inspiring, professional tutors.</p>
-            <div class="demo-form">
-                <h2>Book Your FREE DEMO</h2>
-                <form id="freeTrialForm">
-                    <div class="form-row">
-                        <input type="text" id="name" placeholder="*Name" required>
-                        <input type="email" id="email" placeholder="*Email" required>
-                    </div>
-                    <div class="form-row">
-                        <select id="countryCode" required>
-                            <option value="+1">+1 (USA)</option>
-                            <option value="+91">+91 (India)</option>
-                            <option value="+44">+44 (UK)</option>
-                            <!-- Add more country codes as needed -->
-                        </select>
-                        <input type="tel" id="phone" placeholder="*Phone Number" required>
-                    </div>
-                    <div class="form-row">
-                        <select id="board" required>
-                            <option value="" disabled selected>Board</option>
-                            <option value="cbse">CBSE</option>
-                            <option value="icse">ICSE</option>
-                            <option value="state">State Board</option>
-                        </select>
-                        <select id="grade" required>
-                            <option value="" disabled selected>Grade</option>
-                            <option value="8">8th</option>
-                            <option value="9">9th</option>
-                            <option value="10">10th</option>
-                            <option value="11">11th</option>
-                            <option value="12">12th</option>
-                        </select>
-                    </div>
-                        <button type="submit">Book Your FREE DEMO</button>
-                    </div>
-                </form>
-                <div id="clickPrompt" style="display: none; color: white; margin-top: 10px;"></div>
-            </div>
+            <h1>1:1 Online Tuitions</h1>
+            <p>Book a free tutoring demo at Sri Academics and unlock your academic potential with expert guidance!</p>
+            <h2>Book Your FREE DEMO</h2>
+            <form id="freeTrialForm">
+                <div class="form-row">
+                    <input type="text" id="name" placeholder="*Name" required>
+                    <input type="email" id="email" placeholder="*Email" required>
+                </div>
+                <div class="form-row">
+                    <select id="countryCode" required>
+                        <option value="+1">+1 (USA)</option>
+                        <option value="+91">+91 (India)</option>
+                        <option value="+44">+44 (UK)</option>
+                        <!-- Add more country codes as needed -->
+                    </select>
+                    <input type="tel" id="phone" placeholder="*Phone Number" required>
+                </div>
+                <div class="form-row">
+                    <select id="board" required>
+                        <option value="" disabled selected>Board</option>
+                        <option value="cbse">CBSE</option>
+                        <option value="icse">ICSE</option>
+                        <option value="state">State Board</option>
+                    </select>
+                    <select id="grade" required>
+                        <option value="" disabled selected>Grade</option>
+                        <option value="8">8th</option>
+                        <option value="9">9th</option>
+                        <option value="10">10th</option>
+                        <option value="11">11th</option>
+                        <option value="12">12th</option>
+                    </select>
+                </div>
+                <button type="submit">Book Your FREE DEMO</button>
+            </form>
         </div>
     </section>
 
     <section class="commitment-section">
-        <h2>The Tutoroot Commitment to Students</h2>
+        <h2>The Sri Academics Commitment to Students</h2>
         <div class="commitment-content">
             <div class="student-image">
-                <img src="../src/icons/page1-background.svg" alt="Smiling student">
+                <img src="../public/src/images/background-image-2.svg" alt="Student studying in Sri Academics">
             </div>
             <div class="commitment-points">
                 <div class="commitment-point">
@@ -83,40 +93,62 @@
                 </div>
             </div>
         </div>
-    </section>
+        
+        <h2 class="programs-title">Programs</h2>
+        <div class="boards-container">
+            <!-- Top row text -->
+            <div class="board-names">
+                <span>IGCSE</span>
+                <span>SAT</span>
+                <span>IB</span>
+                <span>NEET</span>
+                <span>CAMBRIDGE</span>
+            </div>
+            
+            <!-- Icons with connectors -->
+            <div class="board-icons">
+                <!-- Top row icons -->
+                <div class="board-icon">
+                    <img src="../public/src/icons/notes.svg" alt="IGCSE">
+                </div>
+                <div class="board-icon">
+                    <img src="../public/src/icons/notes.svg" alt="SAT">
+                </div>
+                <div class="board-icon">
+                    <img src="../public/src/icons/notes.svg" alt="IB">
+                </div>
+                <div class="board-icon">
+                    <img src="../public/src/icons/notes.svg" alt="NEET">
+                </div>
+                <div class="board-icon">
+                    <img src="../public/src/icons/notes.svg" alt="CAMBRIDGE">
+                </div>
+                
+                <!-- Bottom row icons -->
+                <div class="board-icon">
+                    <img src="../public/src/icons/notes.svg" alt="CBSE">
+                </div>
+                <div class="board-icon">
+                    <img src="../public/src/icons/notes.svg" alt="ICSE">
+                </div>
+                <div class="board-icon">
+                    <img src="../public/src/icons/notes.svg" alt="AP">
+                </div>
+                <div class="board-icon">
+                    <img src="../public/src/icons/notes.svg" alt="JEE">
+                </div>
+                <div class="board-icon">
+                    <img src="../public/src/icons/notes.svg" alt="AS/O-LEVEL">
+                </div>
+            </div>
 
-    <section class="programs-section">
-        <h2>Programs</h2>
-        <div class="programs-grid">
-            <div class="program-card" style="background-color: #FFA500;">
-                <img src="../icons/notes.svg" alt="CBSE">
-                <h3>CBSE</h3>
-                <p>8th - 12th</p>
-            </div>
-            <div class="program-card" style="background-color: #FFB700;">
-                <img src="../icons/notes.svg" alt="ICSE">
-                <h3>ICSE</h3>
-                <p>8th - 10th</p>
-            </div>
-            <div class="program-card" style="background-color: #FFC800;">
-                <img src="../icons/notes.svg" alt="IGCSE IBDP">
-                <h3>IGCSE IBDP</h3>
-                <p>8th - 12th</p>
-            </div>
-            <div class="program-card" style="background-color: #FFD700;">
-                <img src="../icons/notes.svg" alt="State Board">
-                <h3>State Board</h3>
-                <p>8th - 12th</p>
-            </div>
-            <div class="program-card" style="background-color: #FFE600;">
-                <img src="../icons/notes.svg" alt="Foundation">
-                <h3>Foundation</h3>
-                <p>8th - 12th</p>
-            </div>
-            <div class="program-card" style="background-color: #FFF500;">
-                <img src="../icons/notes.svg" alt="JEE/NEET">
-                <h3>JEE/NEET</h3>
-                <p>11th - 12th</p>
+            <!-- Bottom row text -->
+            <div class="board-names bottom">
+                <span>CBSE</span>
+                <span>ICSE</span>
+                <span>AP</span>
+                <span>JEE</span>
+                <span>AS/O-LEVEL</span>
             </div>
         </div>
     </section>
@@ -125,47 +157,47 @@
         <div class="video-container">
             <h2>Watch Our Introduction Video</h2>
             <div class="video-wrapper">
-                <iframe src="https://www.youtube.com/embed/your-video-id" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/LRlw32vpMME" allowfullscreen></iframe>
             </div>
         </div>
     </section>
 
     <section class="benefits-section">
-        <h2>Benefits Of Online Tutoring In Vnaya</h2>
+        <h2>Benefits Of Online Tutoring In Sri Academics</h2>
         <div class="benefits-grid">
             <div class="benefit-item">
                 <div class="benefit-icon">
-                    <img src="../icons/book.svg" alt="Counselor Icon">
+                    <img src="../public/src/icons/notes.svg" alt="Counselor Icon">
                 </div>
                 <p class="benefit-text">Dedicated Academic Counselor</p>
             </div>
             <div class="benefit-item">
                 <div class="benefit-icon">
-                    <img src="../icons/book.svg" alt="Curriculum Icon">
+                    <img src="../public/src/icons/notes.svg" alt="Curriculum Icon">
                 </div>
                 <p class="benefit-text">Customized Session As Per Individual Board/Curriculum</p>
             </div>
             <div class="benefit-item">
                 <div class="benefit-icon">
-                    <img src="../icons/book.svg" alt="Parenting Icon">
+                    <img src="../public/src/icons/notes.svg" alt="Parenting Icon">
                 </div>
                 <p class="benefit-text">Learning Leaders For Free Parenting Counseling</p>
             </div>
             <div class="benefit-item">
                 <div class="benefit-icon">
-                    <img src="../icons/book.svg" alt="Report Card Icon">
+                    <img src="../public/src/icons/notes.svg" alt="Report Card Icon">
                 </div>
                 <p class="benefit-text">Monthly Report Cards For Parents</p>
             </div>
             <div class="benefit-item">
                 <div class="benefit-icon">
-                    <img src="../icons/book.svg" alt="Assessment Icon">
+                    <img src="../public/src/icons/notes.svg" alt="Assessment Icon">
                 </div>
                 <p class="benefit-text">Weekly Online Assessments And Evaluations</p>
             </div>
             <div class="benefit-item">
                 <div class="benefit-icon">
-                    <img src="../icons/book.svg" alt="Learning Style Icon">
+                    <img src="../public/src/icons/notes.svg" alt="Learning Style Icon">
                 </div>
                 <p class="benefit-text">Natural Learning Style Methodology Adopted</p>
             </div>
@@ -177,7 +209,7 @@
         <div class="testimonials-grid">
             <div class="testimonial-card">
                 <div class="testimonial-image">
-                    <img src="../icons/testtube.svg" alt="Sai Shreya">
+                    <img src="../public/src/icons/notes.svg" alt="Sai Shreya">
                 </div>
                 <h3 class="testimonial-name">Student 1</h3>
                 <p class="testimonial-grade">Grade: 8 | CBSE NEET</p>
@@ -185,7 +217,7 @@
             </div>
             <div class="testimonial-card">
                 <div class="testimonial-image">
-                    <img src="../icons/testtube.svg" alt="Pradeep Krupanandan">
+                    <img src="../public/src/icons/notes.svg" alt="Pradeep Krupanandan">
                 </div>
                 <h3 class="testimonial-name">Student 2</h3>
                 <p class="testimonial-grade">Grade: 3 | CBSE, NEET</p>
@@ -193,7 +225,7 @@
             </div>
             <div class="testimonial-card">
                 <div class="testimonial-image">
-                    <img src="../icons/testtube.svg" alt="Mishika">
+                    <img src="../public/src/icons/notes.svg" alt="Mishika">
                 </div>
                 <h3 class="testimonial-name">Student 3</h3>
                 <p class="testimonial-grade">Grade: 10 | CBSE, IIT-JEE</p>
@@ -201,7 +233,7 @@
             </div>
             <div class="testimonial-card">
                 <div class="testimonial-image">
-                    <img src="../icons/testtube.svg" alt="Pranavi Reddy">
+                    <img src="../public/src/icons/notes.svg" alt="Pranavi Reddy">
                 </div>
                 <h3 class="testimonial-name">Student 4</h3>
                 <p class="testimonial-grade">Grade: 7 | CBSE NEET</p>
@@ -209,7 +241,7 @@
             </div>
             <div class="testimonial-card">
                 <div class="testimonial-image">
-                    <img src="../icons/testtube.svg" alt="Sabarish R">
+                    <img src="../public/src/icons/notes.svg" alt="Sabarish R">
                 </div>
                 <h3 class="testimonial-name">Student 5</h3>
                 <p class="testimonial-grade">Grade: 9 | CBSE Board</p>
@@ -217,7 +249,7 @@
             </div>
             <div class="testimonial-card">
                 <div class="testimonial-image">
-                    <img src="../icons/testtube.svg" alt="Zarka Khan">
+                    <img src="../public/src/icons/notes.svg" alt="Zarka Khan">
                 </div>
                 <h3 class="testimonial-name">Student 6</h3>
                 <p class="testimonial-grade">Grade: 12 | CBSE</p>
