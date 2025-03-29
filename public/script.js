@@ -31,31 +31,54 @@ document.addEventListener('DOMContentLoaded', function() {
         checkEmailAndWrite(name, email, phone, board, grade, countryCode);
     }
 
-    function checkEmailAndWrite(name, email, phone, board, grade) {
-        db.orderByChild("email").equalTo(email).once("value", snapshot => {
-            if (snapshot.exists()) {
-                console.log("Email already exists");
-                // You can show a message to the user here
-                document.getElementById("clickPrompt").textContent = "This email is already registered.";
+    function checkEmailAndWrite(name, email, phone, board, grade, countryCode) {
+        console.log("Checking email...", email); // Debug log with email value
+        db.orderByChild("email").equalTo(email).once("value")
+            .then(snapshot => {
+                console.log("Snapshot value:", snapshot.val()); // Debug log snapshot
+                if (snapshot.exists()) {
+                    console.log("Email already exists");
+                    document.getElementById("clickPrompt").textContent = "This email is already registered.";
+                    document.getElementById("clickPrompt").className = "error";
+                    document.getElementById("clickPrompt").style.display = "block";
+                } else {
+                    console.log("Email check passed, proceeding with registration..."); // Debug log
+                    // Email doesn't exist, proceed with writing data
+                    return writeUserData(name, email, phone, board, grade, countryCode);
+                }
+            })
+            .then((result) => {
+                if (result !== undefined) { // Only proceed if writeUserData was called
+                    console.log("Registration successful!");
+                    document.getElementById("clickPrompt").textContent = "Registration successful!";
+                    document.getElementById("clickPrompt").className = "success";
+                    document.getElementById("clickPrompt").style.display = "block";
+                }
+            })
+            .catch(error => {
+                console.error("Error during registration:", error);
+                document.getElementById("clickPrompt").textContent = "Registration failed. Please try again.";
+                document.getElementById("clickPrompt").className = "error";
                 document.getElementById("clickPrompt").style.display = "block";
-            } else {
-                // Email doesn't exist, proceed with writing data
-                writeUserData(name, email, phone, board, grade, countryCode);
-                document.getElementById("clickPrompt").textContent = "Registration successful!";
-                document.getElementById("clickPrompt").style.display = "block";
-            }
-        });
+            });
     }
 
     function writeUserData(name, email, phone, board, grade, countryCode) {
+        console.log("Writing user data..."); // Debug log
         // Use the Firebase SDK methods directly
-        db.push({
-          username: name,
-          email: email,
-          phone: phone,
-          board: board,
-          grade: grade,
-          countryCode: countryCode
+        return db.push({
+            username: name,
+            email: email,
+            phone: phone,
+            board: board,
+            grade: grade,
+            countryCode: countryCode
+        }).then(() => {
+            console.log("Data written successfully");
+            return true; // Return a value to indicate success
+        }).catch(error => {
+            console.error("Error writing data:", error);
+            throw error; // Propagate error to the main chain
         });
     }
 
