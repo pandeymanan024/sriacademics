@@ -632,7 +632,7 @@ body {
 }
 
 .commitment-section {
-    background-color: #FAF9F6; /* Match hero section background */
+    background-color: #FAF9F6;
     padding: 60px 20px;
 }
 
@@ -1123,17 +1123,26 @@ body {
 }
 
 #countryCode {
-    width: 30%; /* Adjust width as needed */
+    width: 30%;
     padding: 10px;
     border: none;
     border-radius: 5px;
     font-size: 16px;
-    appearance: none;
-    background-image: url('data:image/svg+xml;utf8,<svg fill="%23000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
-    background-repeat: no-repeat;
-    background-position: right 10px center;
-    background-size: 20px;
-    margin-right: 10px; /* Space between dropdown and phone input */
+    background-color: white;
+    cursor: pointer;
+}
+
+#countryCode option {
+    padding: 5px;
+    font-size: 14px;
+}
+
+/* For better mobile experience */
+@media (max-width: 768px) {
+    #countryCode {
+        width: 100%;
+        margin-bottom: 10px;
+    }
 }
 
 /* New styles for contact button and dropdown */
@@ -1197,104 +1206,23 @@ body {
 
 .boards-section {
     padding: 60px 20px;
-    background-color: #FAF9F6;
+    background: none;
 }
 
 .boards-container {
-    max-width: 1200px; /* Increased for better spacing */
+    max-width: 1200px;
     margin: 0 auto;
-    position: relative;
-    padding: 0 40px;
-    padding-top: 20px;
+    padding: 20px 40px;
+    background: none;
 }
 
-/* Board names styling */
-.board-names {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 40px;
-}
-
-.board-names.bottom {
-    margin-top: 40px;
-}
-
-.board-names span {
-    font-size: 28px; /* Larger font */
-    font-weight: 300;
-    letter-spacing: 1.5px;
-    width: 20%; /* Equal width for each text item */
-    text-align: center;
-}
-
-/* Board icons container */
-.board-icons {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 5 equal columns */
-    gap: 20px;
-    position: relative;
+.boards-image {
+    width: 100%;
+    height: auto;
+    display: block;
     margin: 0 auto;
+    background: none;
 }
-
-/* Common icon styles */
-.board-icon {
-    width: 70px; /* Larger icons */
-    height: 70px;
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto; /* Center in grid cell */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-}
-
-.board-icon img {
-    width: 35px;
-    height: 35px;
-    filter: brightness(0) invert(1);
-}
-
-/* Connector lines */
-.connector {
-    position: absolute;
-    width: calc(100% - 80px); /* Full width minus icon widths */
-    height: 1px;
-    background: linear-gradient(to right, rgba(0,0,0,0.05), rgba(0,0,0,0.05));
-    top: 50%;
-    left: 40px;
-    z-index: 0;
-}
-
-/* Colors for text */
-.board-names span {
-    opacity: 0.8; /* Slightly transparent for pastel effect */
-}
-
-/* Top row text colors - Exact matches */
-.board-names span:nth-child(1) { color: #ffb8a8; } /* IGCSE */
-.board-names span:nth-child(2) { color: #90EE90; } /* SAT */
-.board-names span:nth-child(3) { color: #ADD8E6; } /* IB */
-.board-names span:nth-child(4) { color: #ffb8a8; } /* NEET */
-.board-names span:nth-child(5) { color: #90EE90; } /* CAMBRIDGE */
-
-/* Bottom row text colors - Exact matches */
-.board-names.bottom span:nth-child(1) { color: #FF9B9B; } /* CBSE */
-.board-names.bottom span:nth-child(2) { color: #98D8C6; } /* ICSE */
-.board-names.bottom span:nth-child(3) { color: #A7C5EB; } /* AP */
-.board-names.bottom span:nth-child(4) { color: #E5B8F4; } /* JEE */
-.board-names.bottom span:nth-child(5) { color: #B5D692; } /* AS/O-LEVEL */
-
-/* Icon colors - Exact matches */
-.board-icon:nth-child(1) { background-color: #FF9B9B; } /* CBSE */
-.board-icon:nth-child(2) { background-color: #98D8C6; } /* ICSE */
-.board-icon:nth-child(3) { background-color: #A7C5EB; } /* AP */
-.board-icon:nth-child(4) { background-color: #E5B8F4; } /* JEE */
-.board-icon:nth-child(5) { background-color: #B5D692; } /* AS/O-LEVEL */
-.board-icon:nth-child(6) { background-color: #ffb8a8; } /* IGCSE */
-.board-icon:nth-child(7) { background-color: #90EE90; } /* SAT */
-.board-icon:nth-child(8) { background-color: #ADD8E6; } /* IB */
-.board-icon:nth-child(9) { background-color: #ffb8a8; } /* NEET */
-.board-icon:nth-child(10) { background-color: #90EE90; } /* CAMBRIDGE */
 
 .programs-title {
     font-size: 42px;
