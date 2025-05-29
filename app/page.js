@@ -13,7 +13,7 @@ export default function Home() {
       textAlign: 'center',
       padding: '20px'
     }}>
-      Welcome to Sri Academics
+      Welcome to Sri Academics learning platform
     </main>
   );
 }
