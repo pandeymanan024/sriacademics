@@ -9,6 +9,8 @@ const nextConfig = {
   trailingSlash: true,
   // Add this to ensure static files are copied correctly
   assetPrefix: process.env.NODE_ENV === 'production' ? '/sri-academics' : '',
+  // Add this to ensure all static files are included in the build
+  distDir: 'out',
 }
 
 module.exports = nextConfig

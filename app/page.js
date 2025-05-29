@@ -1,14 +1,13 @@
 'use client';
 
 import { useEffect } from 'react';
-import { useRouter } from 'next/navigation';
 
 export default function Home() {
-  const router = useRouter();
-
   useEffect(() => {
-    // redirect to the index.html file
-    window.location.href = '/index.html';
+    // Get the base path from next.config.js
+    const basePath = process.env.NODE_ENV === 'production' ? '/sri-academics' : '';
+    // Redirect to the index.html file with the correct base path
+    window.location.href = `${basePath}/index.html`;
   }, []);
 
   return null;
