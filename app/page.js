@@ -7,9 +7,25 @@ export default function Home() {
   const router = useRouter();
 
   useEffect(() => {
-    // redirect to the index.html file
-    window.location.href = '/index.html';
-  }, []);
+    console.log('Redirecting to index.html');
+    router.push('/index.html');
+    console.log('Redirected to index.html');
+  }, [router]);
 
+  // return (
+  //   <main style={{
+  //     display: 'flex',
+  //     justifyContent: 'center',
+  //     alignItems: 'center',
+  //     minHeight: '100vh',
+  //     fontSize: '2rem',
+  //     fontWeight: 'bold',
+  //     color: '#333',
+  //     textAlign: 'center',
+  //     padding: '20px'
+  //   }}>
+  //     Welcome to Sri Academics
+  //   </main>
+  // );
   return null;
 }
