@@ -13,8 +13,8 @@ export default function FreeTrialForm() {
         grade: '',
         countryCode: ''
     });
-    const [message, setMessage] = useState('');
-    const [messageType, setMessageType] = useState('');
+    const [message, setMessage] = useState('setMessage');
+    const [messageType, setMessageType] = useState('setMessageType');
 
     const handleChange = (e) => {
         setForm({
@@ -26,8 +26,8 @@ export default function FreeTrialForm() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         console.log('Submitting form', form);
-        setMessage('');
-        setMessageType('');
+        setMessage('setMessage');
+        setMessageType('setMessageType');
         const db = getDatabase();
         const dbRef = ref(db, 'freeTrialForm');
         
@@ -265,4 +265,4 @@ export default function FreeTrialForm() {
             )}
         </form>
     );
-} 
+}
