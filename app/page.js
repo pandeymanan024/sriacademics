@@ -212,3 +212,12 @@ export default function Home() {
         </main>
     );
 }
+
+@media (max-width: 900px) {
+  .free-trial-form {
+    grid-template-columns: 1fr;
+  }
+  .free-trial-form button {
+    grid-column: 1;
+  }
+}
