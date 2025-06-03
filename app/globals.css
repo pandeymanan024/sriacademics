@@ -98,7 +98,7 @@ body {
 
 /* Hero section styles */
 .hero {
-  padding: 120px 0 60px 0;
+  padding: 60px 0 60px 0;
   background: #FAF9F6;
   text-align: center;
 }
@@ -472,7 +472,7 @@ body {
   }
 
   .hero {
-    padding: 100px 20px 40px;
+    padding: 60px 20px 40px;
   }
 
   .hero h1 {

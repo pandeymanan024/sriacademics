@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { getDatabase, ref, push, query, orderByChild, equalTo, get } from 'firebase/database';
 
 export default function FreeTrialForm() {
-    const [formData, setFormData] = useState({
+    const [form, setForm] = useState({
         name: '',
         email: '',
         phone: '',
@@ -16,20 +16,22 @@ export default function FreeTrialForm() {
     const [messageType, setMessageType] = useState('');
 
     const handleChange = (e) => {
-        setFormData({
-            ...formData,
+        setForm({
+            ...form,
             [e.target.name]: e.target.value
         });
     };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setMessage('');
+        setMessageType('');
         const db = getDatabase();
-        const usersRef = ref(db, 'users');
+        const dbRef = ref(db, 'freeTrialForm');
         
         try {
             // Check if email exists
-            const emailQuery = query(usersRef, orderByChild('email'), equalTo(formData.email));
+            const emailQuery = query(dbRef, orderByChild('email'), equalTo(form.email));
             const snapshot = await get(emailQuery);
             
             if (snapshot.exists()) {
@@ -39,18 +41,18 @@ export default function FreeTrialForm() {
             }
 
             // Write user data
-            await push(usersRef, {
-                username: formData.name,
-                email: formData.email,
-                phone: formData.phone,
-                board: formData.board,
-                grade: formData.grade,
-                countryCode: formData.countryCode
+            await push(dbRef, {
+                username: form.name,
+                email: form.email,
+                phone: form.phone,
+                board: form.board,
+                grade: form.grade,
+                countryCode: form.countryCode
             });
 
             setMessage('Registration successful!');
             setMessageType('success');
-            setFormData({
+            setForm({
                 name: '',
                 email: '',
                 phone: '',
@@ -60,90 +62,92 @@ export default function FreeTrialForm() {
             });
         } catch (error) {
             console.error('Error:', error);
-            setMessage('An error occurred. Please try again.');
+            setMessage('Registration failed. Please try again.');
             setMessageType('error');
         }
     };
 
     return (
-        <form onSubmit={handleSubmit} className="free-trial-form">
+        <form className="free-trial-form" onSubmit={handleSubmit} autoComplete="off">
+            {/* Row 1: Name, Email */}
             <input
                 type="text"
                 name="name"
-                placeholder="Full Name"
-                value={formData.name}
+                placeholder="*Name"
+                value={form.name}
                 onChange={handleChange}
                 required
             />
             <input
                 type="email"
                 name="email"
-                placeholder="Email"
-                value={formData.email}
+                placeholder="*Email"
+                value={form.email}
                 onChange={handleChange}
                 required
             />
-            <div className="phone-input">
-                <select
-                    name="countryCode"
-                    value={formData.countryCode}
-                    onChange={handleChange}
-                    required
-                >
-                    <option value="">Select Country</option>
-                    <option value="+1">🇺🇸 USA (+1)</option>
-                    <option value="+91">🇮🇳 India (+91)</option>
-                    <option value="+44">🇬🇧 UK (+44)</option>
-                    {/* Add more country codes as needed */}
-                </select>
-                <input
-                    type="tel"
-                    name="phone"
-                    placeholder="Phone Number"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    required
-                />
-            </div>
+            {/* Row 2: Country, Phone */}
             <select
-                name="board"
-                value={formData.board}
+                name="countryCode"
+                value={form.countryCode}
                 onChange={handleChange}
                 required
             >
-                <option value="">Select Board</option>
-                <option value="IGCSE">IGCSE</option>
-                <option value="SAT">SAT</option>
-                <option value="IB">IB</option>
-                <option value="CBSE">CBSE</option>
-                <option value="ICSE">ICSE</option>
-                <option value="State Board">State Board</option>
+                <option value="" disabled>Select Country</option>
+                <option value="+91">India (+91)</option>
+                <option value="+1">USA (+1)</option>
+                <option value="+44">UK (+44)</option>
+                {/* Add more countries as needed */}
+            </select>
+            <input
+                type="tel"
+                name="phone"
+                placeholder="*Phone Number"
+                value={form.phone}
+                onChange={handleChange}
+                required
+            />
+            {/* Row 3: Board, Grade */}
+            <select
+                name="board"
+                value={form.board}
+                onChange={handleChange}
+                required
+            >
+                <option value="" disabled>Board</option>
+                <option value="cbse">CBSE</option>
+                <option value="igcse">IGCSE</option>
+                <option value="icse">ICSE</option>
+                <option value="sat">SAT</option>
+                <option value="ap">AP</option>
+                <option value="ib">IB</option>
+                <option value="jee">JEE</option>
+                <option value="neet">NEET</option>
+                <option value="as/o-level">AS/O-LEVEL</option>
+                <option value="cambridge">CAMBRIDGE</option>
             </select>
             <select
                 name="grade"
-                value={formData.grade}
+                value={form.grade}
                 onChange={handleChange}
                 required
             >
-                <option value="">Select Grade</option>
-                <option value="Grade 1">Grade 1</option>
-                <option value="Grade 2">Grade 2</option>
-                <option value="Grade 3">Grade 3</option>
-                <option value="Grade 4">Grade 4</option>
-                <option value="Grade 5">Grade 5</option>
-                <option value="Grade 6">Grade 6</option>
-                <option value="Grade 7">Grade 7</option>
-                <option value="Grade 8">Grade 8</option>
-                <option value="Grade 9">Grade 9</option>
-                <option value="Grade 10">Grade 10</option>
-                <option value="Grade 11">Grade 11</option>
-                <option value="Grade 12">Grade 12</option>
+                <option value="" disabled>Grade</option>
+                <option value="4">4th</option>
+                <option value="5">5th</option>
+                <option value="6">6th</option>
+                <option value="7">7th</option>
+                <option value="8">8th</option>
+                <option value="9">9th</option>
+                <option value="10">10th</option>
+                <option value="11">11th</option>
+                <option value="12">12th</option>
             </select>
+            {/* Button spans both columns */}
             <button type="submit">Book Your FREE DEMO</button>
+            {/* Message */}
             {message && (
-                <div id="clickPrompt" className={messageType}>
-                    {message}
-                </div>
+                <div id="clickPrompt" className={messageType} style={{ gridColumn: "1 / span 2" }}>{message}</div>
             )}
         </form>
     );
