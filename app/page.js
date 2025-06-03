@@ -26,7 +26,7 @@ export default function Home() {
             <header className="header">
                 <div className="logo">
                     <Image src="/src/icons/sri-academics-logo.svg" alt="Sri Academics Logo" width={40} height={40} />
-                    <h1>Sri Academics</h1>
+                    <h1>Sri Academicsssss</h1>
                 </div>
                 <div className="contact-dropdown">
                     <button className="contact-btn">Contact Us</button>
