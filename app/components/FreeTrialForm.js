@@ -25,6 +25,7 @@ export default function FreeTrialForm() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        console.log('Submitting form', form);
         setMessage('');
         setMessageType('');
         const db = getDatabase();
