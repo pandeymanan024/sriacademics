@@ -683,9 +683,12 @@ body {
                         <Link href="/terms" target="_blank">Terms and conditions</Link>
                     </div>
                     <div className="social-icons">
-                        <Link href="https://wa.me/+91 7772094431?text=interested" target="_blank" className="social-icon">
+                    <Link href="https://wa.me/+917772094431?text=interested" target="_blank" className="social-icon">
+                    <Image src="/src/icons/whatsapp.svg" alt="WhatsApp" width={24} height={24} />
+                    </Link>
+                        {/* <Link href="https://wa.me/+91 7772094431?text=interested" target="_blank" className="social-icon">
                             <Image src="/src/icons/whatsapp.svg" alt="WhatsApp" width={24} height={24} />
-                        </Link>
+                        </Link> */}
                         <Link href="https://www.linkedin.com/in/manan-pandey-2a898a17a/" className="social-icon">
                             <Image src="/src/icons/linkedin-svgrepo-com.svg" alt="LinkedIn" width={24} height={24} />
                         </Link>
