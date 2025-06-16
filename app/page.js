@@ -6,6 +6,18 @@ import Link from 'next/link';
 import FreeTrialForm from './components/FreeTrialForm';
 
 export default function Home() {
+    useEffect(() => {
+        // FAQ functionality
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                item.classList.toggle('active');
+            });
+        });
+    }, []);
+
     return (
         <>
         <style jsx global>{`
@@ -361,12 +373,15 @@ body {
   font-weight: 500;
 }
 .faq-answer {
-  padding: 20px;
-  display: none;
+  padding: 0 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out;
   background-color: white;
 }
 .faq-item.active .faq-answer {
-  display: block;
+  padding: 20px;
+  max-height: 500px; /* Adjust this value as needed to be larger than any possible answer */
 }
 .footer {
   background-color: #333;
@@ -498,11 +513,11 @@ body {
                 <div className="contact-dropdown">
                     <button className="contact-btn">Contact Us</button>
                     <div className="dropdown-content">
-                        <Link href="https://wa.me/+91 7772094431" target="_blank">
+                        <Link href="https://wa.me/8889857170" target="_blank">
                             <Image src="/src/icons/whatsapp.svg" alt="WhatsApp" width={20} height={20} />
                             WhatsApp
                         </Link>
-                        <Link href="mailto:your_email@example.com">
+                        <Link href="mailto:support@sriacademics.com">
                             <Image src="/src/icons/email.svg" alt="Email" width={20} height={20} />
                             Email
                         </Link>
