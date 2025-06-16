@@ -539,8 +539,15 @@ body {
                 </div>
                 
                 <h2 className="programs-title">Programs We Offer</h2>
-                <div className="boards-container">
-                    <Image src="/src/images/background-image-3.png" alt="Educational Boards" width={1200} height={600} className="boards-image" />
+                <div className="boards-container" style={{ backgroundColor: '#FAF9F6', borderRadius: '10px' }}>
+                    <Image
+                        src="/src/images/background-image-3.png"
+                        alt="Educational Boards"
+                        width={1200}
+                        height={600}
+                        className="boards-image"
+                        style={{ backgroundColor: '#FAF9F6', borderRadius: '10px' }}
+                    />
                 </div>
             </section>
 
