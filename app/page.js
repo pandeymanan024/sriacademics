@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import FreeTrialForm from './components/FreeTrialForm';
 import { initializeApp } from 'firebase/app';
+import { getDatabase } from 'firebase/database';
 
 const firebaseConfig = {
     apiKey: "AIzaSyC0cxgA0bt73seZ1Co3TJIXPhcRJa2y66E",
@@ -15,6 +16,10 @@ const firebaseConfig = {
     messagingSenderId: "317317669118",
     appId: "1:317317669118:web:6b77752aac53d15d1445af"
 };
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const database = getDatabase(app);
 
 export default function Home() {
     useEffect(() => {
@@ -472,6 +477,29 @@ body {
   .free-trial-form button {
     grid-column: 1;
   }
+}
+.message {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.message.error {
+    background-color: #ffebee;
+    color: #c62828;
+    border: 1px solid #ffcdd2;
+}
+
+.message.success {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #c8e6c9;
+}
+
+.free-trial-form button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
 }
         `}</style>
         <main>
