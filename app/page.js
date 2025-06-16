@@ -269,17 +269,15 @@ body {
 }
 .benefits-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   max-width: 1200px;
   margin: 0 auto;
+  place-items: center;
 }
 .benefit-item {
-  text-align: center;
-  padding: 30px;
-  background-color: #FAF9F6;
-  border-radius: 10px;
-  transition: transform 0.3s ease;
+  width: 100%;
+  max-width: 350px;
 }
 .benefit-item:hover {
   transform: translateY(-5px);
@@ -456,6 +454,14 @@ body {
   }
   .free-trial-form button {
     grid-column: 1;
+  }
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .benefits-grid {
+    grid-template-columns: 1fr;
   }
 }
 .message {
