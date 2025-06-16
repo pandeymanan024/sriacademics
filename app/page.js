@@ -584,25 +584,25 @@ body {
                     </div>
                     <div className="benefit-item">
                         <div className="benefit-icon">
-                            <Image src="/src/icons/notes.svg" alt="Parenting Icon" width={40} height={40} />
+                            <Image src="/src/icons/learning-teacher-svgrepo-com.svg" alt="Parenting Icon" width={40} height={40} />
                         </div>
                         <p className="benefit-text">Live, Interactive Sessions</p>
                     </div>
                     <div className="benefit-item">
                         <div className="benefit-icon">
-                            <Image src="/src/icons/notes.svg" alt="Report Card Icon" width={40} height={40} />
+                            <Image src="/src/icons/schedule-calendar-svgrepo-com.svg" alt="Report Card Icon" width={40} height={40} />
                         </div>
                         <p className="benefit-text">Flexible Scheduling</p>
                     </div>
                     <div className="benefit-item">
                         <div className="benefit-icon">
-                            <Image src="/src/icons/notes.svg" alt="Assessment Icon" width={40} height={40} />
+                            <Image src="/src/icons/money-bag-svgrepo-com.svg" alt="Assessment Icon" width={40} height={40} />
                         </div>
                         <p className="benefit-text">Affordable and Accessible</p>
                     </div>
                     <div className="benefit-item">
                         <div className="benefit-icon">
-                            <Image src="/src/icons/notes.svg" alt="Learning Style Icon" width={40} height={40} />
+                            <Image src="/src/icons/class-management-svgrepo-com.svg" alt="Learning Style Icon" width={40} height={40} />
                         </div>
                         <p className="benefit-text">Get Matched with the Right Tutor</p>
                     </div>
