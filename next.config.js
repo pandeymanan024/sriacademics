@@ -1,14 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  basePath: process.env.NODE_ENV === 'production' ? '/sri-academics' : '',
+  // basePath: '', // REMOVE or comment out
   images: {
     unoptimized: true,
   },
   // Ensure trailing slashes are handled correctly
   trailingSlash: true,
-  // Add this to ensure static files are copied correctly
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/sri-academics' : '',
+  // assetPrefix: '', // REMOVE or comment out
   // Add this to ensure all static files are included in the build
   distDir: 'out',
 }
