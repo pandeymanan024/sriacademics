@@ -572,13 +572,13 @@ body {
                 <div className="benefits-grid">
                     <div className="benefit-item">
                         <div className="benefit-icon">
-                            <Image src="/src/icons/notes.svg" alt="Counselor Icon" width={40} height={40} />
+                            <Image src="/src/icons/google-classroom-svgrepo-com.svg" alt="Counselor Icon" width={40} height={40} />
                         </div>
                         <p className="benefit-text">Customized Learning Plans</p>
                     </div>
                     <div className="benefit-item">
                         <div className="benefit-icon">
-                            <Image src="/src/icons/notes.svg" alt="Curriculum Icon" width={40} height={40} />
+                            <Image src="/src/icons/tyre-expert-svgrepo-com.svg" alt="Curriculum Icon" width={40} height={40} />
                         </div>
                         <p className="benefit-text">Expert Tutors at Your Fingertips</p>
                     </div>
