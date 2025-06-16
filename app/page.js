@@ -689,13 +689,13 @@ body {
                         {/* <Link href="https://wa.me/+91 7772094431?text=interested" target="_blank" className="social-icon">
                             <Image src="/src/icons/whatsapp.svg" alt="WhatsApp" width={24} height={24} />
                         </Link> */}
-                        <Link href="https://www.linkedin.com/in/manan-pandey-2a898a17a/" className="social-icon">
+                        <Link href="https://www.linkedin.com/in/manan-pandey-2a898a17a/" target="_blank" className="social-icon">
                             <Image src="/src/icons/linkedin-svgrepo-com.svg" alt="LinkedIn" width={24} height={24} />
                         </Link>
                         <Link href="https://www.instagram.com/sriacademics?utm_source=qr&igsh=OHJ4dmQwbGxpOTJ2" target="_blank" className="social-icon">
                             <Image src="/src/icons/instagram.svg" alt="Instagram" width={24} height={24} />
                         </Link>
-                        <Link href="https://www.youtube.com/@mananpandey940" className="social-icon">
+                        <Link href="https://www.youtube.com/@mananpandey940" target="_blank" className="social-icon">
                             <Image src="/src/icons/youtube.svg" alt="YouTube" width={24} height={24} />
                         </Link>
                     </div>
