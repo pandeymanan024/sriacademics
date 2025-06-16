@@ -278,6 +278,7 @@ body {
 .benefit-item {
   width: 100%;
   max-width: 350px;
+  padding: 50px 30px;
 }
 .benefit-item:hover {
   transform: translateY(-5px);
