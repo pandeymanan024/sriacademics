@@ -85,24 +85,39 @@ body {
   position: absolute;
   right: 0;
   background-color: white;
-  min-width: 200px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-  z-index: 1;
+  min-width: 220px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  border-radius: 12px;
+  z-index: 1000;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 16px 0;
 }
-.contact-dropdown:hover .dropdown-content {
-  display: block;
+.contact-dropdown:hover .dropdown-content,
+.contact-dropdown .dropdown-content.show {
+  display: flex;
 }
 .dropdown-content a {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 12px 16px;
-  color: #333;
+  gap: 12px;
+  padding: 12px 24px;
+  color: #222;
   text-decoration: none;
+  font-size: 18px;
+  width: 100%;
+  justify-content: flex-start;
+  text-align: left;
+  font-weight: 500;
+  border: none;
+  background: none;
 }
 .dropdown-content a:hover {
-  background-color: #f8f9fa;
+  background: #f8f9fa;
+}
+.dropdown-content img {
+  width: 28px;
+  height: 28px;
 }
 .hero {
   padding: 120px 0 60px 0;
@@ -538,7 +553,7 @@ body {
                 <h2>The Sri Academics Commitment to Students</h2>
                 <div className="commitment-content">
                     <div className="student-image">
-                        <Image src="/src/images/image-2nd-page.jpeg" alt="Student studying in Sri Academics" width={500} height={300} />
+                        <Image src="/src/images/image-2nd-page.jpeg" alt="Student studying in Sri Academics" width={500} height={300} style={{ borderRadius: '16px' }} />
                     </div>
                     <div className="commitment-points">
                         <div className="commitment-point">

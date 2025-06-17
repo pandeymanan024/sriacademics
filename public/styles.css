@@ -1179,6 +1179,8 @@ body {
     border-radius: 15px; /* More rounded corners for dropdown */
     z-index: 1000;
     overflow: hidden; /* Ensure content respects border radius */
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .dropdown-content a {
@@ -1188,6 +1190,8 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
+    justify-content: flex-start;
+    text-align: left;
 }
 
 .dropdown-content a:hover {
