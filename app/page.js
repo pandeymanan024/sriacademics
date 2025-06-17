@@ -538,7 +538,7 @@ body {
                 <h2>The Sri Academics Commitment to Students</h2>
                 <div className="commitment-content">
                     <div className="student-image">
-                        <Image src="/src/images/background-image-2.svg" alt="Student studying in Sri Academics" width={500} height={300} />
+                        <Image src="/src/images/image-2nd-page.jpeg" alt="Student studying in Sri Academics" width={500} height={300} />
                     </div>
                     <div className="commitment-points">
                         <div className="commitment-point">
