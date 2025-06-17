@@ -85,39 +85,30 @@ body {
   position: absolute;
   right: 0;
   background-color: white;
-  min-width: 220px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
-  border-radius: 12px;
-  z-index: 1000;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 16px 0;
+  min-width: 200px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  z-index: 1;
 }
-.contact-dropdown:hover .dropdown-content,
-.contact-dropdown .dropdown-content.show {
-  display: flex;
+.contact-dropdown:hover .dropdown-content {
+  display: block;
 }
 .dropdown-content a {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 12px 24px;
-  color: #222;
+  gap: 10px;
+  padding: 12px 16px;
+  color: #333;
   text-decoration: none;
-  font-size: 18px;
-  width: 100%;
-  justify-content: flex-start;
-  text-align: left;
-  font-weight: 500;
-  border: none;
-  background: none;
+  justify-content: flex-end;
+  text-align: right;
 }
 .dropdown-content a:hover {
-  background: #f8f9fa;
+  background-color: #f8f9fa;
 }
 .dropdown-content img {
-  width: 28px;
-  height: 28px;
+  width: 20px;
+  height: 20px;
 }
 .hero {
   padding: 120px 0 60px 0;
