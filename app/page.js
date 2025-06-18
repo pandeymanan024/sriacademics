@@ -59,9 +59,8 @@ body {
   font-size: 24px;
 }
 .header .contact-dropdown {
-  position: absolute;
-  right: 40px;
-  top: 20px;
+  position: relative;
+  display: inline-block;
 }
 .contact-btn {
   padding: 12px 32px;
@@ -83,32 +82,41 @@ body {
 .dropdown-content {
   display: none;
   position: absolute;
-  right: 0;
+  left: 0;
+  top: 100%;
   background-color: white;
-  min-width: 200px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-  z-index: 1;
+  min-width: 160px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  border-radius: 8px;
+  z-index: 1000;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 8px 0;
 }
 .contact-dropdown:hover .dropdown-content {
-  display: block;
+  display: flex;
 }
 .dropdown-content a {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 12px 16px;
-  color: #333;
+  gap: 8px;
+  padding: 8px 16px;
+  color: #222;
   text-decoration: none;
-  justify-content: flex-end;
-  text-align: right;
+  font-size: 16px;
+  width: 100%;
+  justify-content: flex-start;
+  text-align: left;
+  font-weight: 500;
+  border: none;
+  background: none;
 }
 .dropdown-content a:hover {
-  background-color: #f8f9fa;
+  background: #f8f9fa;
 }
 .dropdown-content img {
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
 }
 .hero {
   padding: 120px 0 60px 0;
