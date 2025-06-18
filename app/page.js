@@ -530,7 +530,26 @@ body {
   }
   .contact-btn.desktop-only { display: none; }
   .hamburger.mobile-only { display: flex; }
-  .dropdown-text { display: none; } /* Hide text in dropdown on mobile */
+  .dropdown-content {
+    min-width: unset;
+    width: 48px;
+    left: 0;
+    right: auto;
+    padding: 8px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .dropdown-link {
+    justify-content: center;
+    text-align: center;
+    padding: 8px 0;
+  }
+  .dropdown-text {
+    display: none;
+  }
 }
 @media (max-width: 900px) {
   .free-trial-form {
