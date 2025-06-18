@@ -58,12 +58,12 @@ body {
   justify-content: space-between;
   align-items: center;
   position: relative;
-  padding: 20px 40px;
+  padding: 10px 20px;
   background-color: #FAF9F6;
   width: 100%;
   top: 0;
   z-index: 1000;
-  height: 80px;
+  height: 60px;
 }
 .header-left {
   flex: 1;
@@ -480,21 +480,19 @@ body {
 }
 @media (max-width: 768px) {
   .header {
-    justify-content: space-between;
-    padding: 15px 16px;
+    padding: 8px 10px;
+    height: 54px;
   }
   .logo {
-    position: static;
-    left: unset;
-    transform: none;
-    flex: 1;
-    justify-content: flex-start;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-right: 0;
+    flex: unset;
   }
   .contact-dropdown {
-    margin-right: 0;
-    flex: 1;
-    justify-content: flex-end;
-    display: flex;
+    margin-left: 0;
+    flex: unset;
   }
   .hero {
     padding: 100px 20px 40px;
