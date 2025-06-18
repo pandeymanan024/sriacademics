@@ -64,14 +64,17 @@ body {
   z-index: 1000;
   height: 48px;
 }
-.header-left {
+.header-spacer {
   flex: 1;
 }
 .logo {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin: 0;
+  margin: 0 auto;
+  position: static;
+  left: unset;
+  transform: none;
 }
 .logo img {
   height: 40px;
@@ -479,6 +482,9 @@ body {
   .header {
     height: 44px;
     padding: 0 6px;
+  }
+  .header-spacer {
+    display: none;
   }
   .logo {
     margin: 0 auto;
