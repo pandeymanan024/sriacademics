@@ -55,7 +55,7 @@ body {
 }
 .header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
   background-color: #FAF9F6;
@@ -84,12 +84,9 @@ body {
   font-size: 24px;
 }
 .contact-dropdown {
-  position: absolute;
-  right: 40px;
-  top: 50%;
-  transform: translateY(-50%);
   display: flex;
   align-items: center;
+  margin-right: 40px;
 }
 .contact-btn {
   padding: 12px 32px;
@@ -286,11 +283,12 @@ body {
   align-items: flex-start;
 }
 .point-icon {
-  width: 24px;
-  height: 24px;
+  width: 14px;
+  height: 14px;
   background-color: #007bff;
   border-radius: 50%;
   flex-shrink: 0;
+  margin-top: 7px;
 }
 .programs-title {
   font-size: 36px;
@@ -574,11 +572,9 @@ body {
         `}</style>
         <main>
             <header className="header">
-                <div className="header-center">
-                    <div className="logo">
-                        <Image src="/src/icons/sri-academics-logo.svg" alt="Sri Academics Logo" width={40} height={40} />
-                        <h1>Sri Academics</h1>
-                    </div>
+                <div className="logo">
+                    <Image src="/src/icons/sri-academics-logo.svg" alt="Sri Academics Logo" width={40} height={40} />
+                    <h1>Sri Academics</h1>
                 </div>
                 <div className="contact-dropdown">
                     <button className="contact-btn desktop-only">Contact Us</button>
