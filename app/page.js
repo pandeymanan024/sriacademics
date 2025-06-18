@@ -16,6 +16,26 @@ export default function Home() {
                 item.classList.toggle('active');
             });
         });
+
+        // Hamburger toggle for mobile
+        const hamburger = document.querySelector('.hamburger');
+        const dropdown = document.querySelector('.dropdown-content');
+        if (hamburger) {
+            hamburger.onclick = (e) => {
+                e.stopPropagation();
+                dropdown.classList.toggle('show');
+            };
+        }
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (
+                dropdown &&
+                !dropdown.contains(e.target) &&
+                !hamburger.contains(e.target)
+            ) {
+                dropdown.classList.remove('show');
+            }
+        });
     }, []);
 
     return (
@@ -35,7 +55,7 @@ body {
 }
 .header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
   background-color: #FAF9F6;
@@ -58,9 +78,10 @@ body {
   color: black;
   font-size: 24px;
 }
-.header .contact-dropdown {
+.contact-dropdown {
   position: relative;
-  display: inline-block;
+  display: flex;
+  align-items: center;
 }
 .contact-btn {
   padding: 12px 32px;
@@ -76,6 +97,27 @@ body {
   position: relative;
   z-index: 2;
 }
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  gap: 5px;
+}
+.hamburger span {
+  display: block;
+  width: 28px;
+  height: 4px;
+  background: #333;
+  border-radius: 2px;
+}
+.desktop-only { display: block; }
+.mobile-only { display: none; }
 .contact-btn:hover {
   background-color: #ffa48d;
 }
@@ -85,7 +127,7 @@ body {
   left: 0;
   top: 100%;
   background-color: white;
-  min-width: 160px;
+  min-width: 140px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.12);
   border-radius: 8px;
   z-index: 1000;
@@ -93,7 +135,8 @@ body {
   align-items: flex-start;
   padding: 8px 0;
 }
-.contact-dropdown:hover .dropdown-content {
+.contact-dropdown:hover .dropdown-content,
+.contact-dropdown .dropdown-content.show {
   display: flex;
 }
 .dropdown-content a {
@@ -477,6 +520,8 @@ body {
     flex-direction: column;
     text-align: center;
   }
+  .contact-btn.desktop-only { display: none; }
+  .hamburger.mobile-only { display: flex; }
 }
 @media (max-width: 900px) {
   .free-trial-form {
@@ -525,7 +570,12 @@ body {
                     <h1>Sri Academics</h1>
                 </div>
                 <div className="contact-dropdown">
-                    <button className="contact-btn">Contact Us</button>
+                    <button className="contact-btn desktop-only">Contact Us</button>
+                    <button className="hamburger mobile-only" aria-label="Open Contact Menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
                     <div className="dropdown-content">
                         <Link href="https://wa.me/8889857170" target="_blank">
                             <Image src="/src/icons/whatsapp.svg" alt="WhatsApp" width={20} height={20} />
