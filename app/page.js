@@ -51,19 +51,18 @@ body {
   background-color: #FAF9F6;
   line-height: 1.6;
   color: #333;
-  padding-top: 80px;
 }
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
-  padding: 10px 20px;
+  padding: 0 10px;
   background-color: #FAF9F6;
   width: 100%;
   top: 0;
   z-index: 1000;
-  height: 60px;
+  height: 48px;
 }
 .header-left {
   flex: 1;
@@ -72,9 +71,7 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  margin: 0;
 }
 .logo img {
   height: 40px;
@@ -480,25 +477,17 @@ body {
 }
 @media (max-width: 768px) {
   .header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 8px 10px;
-    height: 54px;
-    position: relative;
+    height: 44px;
+    padding: 0 6px;
   }
   .logo {
-    position: static;
-    left: unset;
-    transform: none;
     margin: 0 auto;
   }
   .contact-dropdown {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
     margin-left: 0;
+    margin-right: 0;
+    position: static;
+    transform: none;
   }
   .hero {
     padding: 100px 20px 40px;
@@ -615,7 +604,6 @@ body {
         `}</style>
         <main>
             <header className="header">
-                <div className="header-left"></div>
                 <div className="logo">
                     <Image src="/src/icons/sri-academics-logo.svg" alt="Sri Academics Logo" width={40} height={40} />
                     <h1>Sri Academics</h1>
