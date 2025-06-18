@@ -480,7 +480,21 @@ body {
 }
 @media (max-width: 768px) {
   .header {
-    padding: 15px 20px;
+    justify-content: space-between;
+    padding: 15px 16px;
+  }
+  .logo {
+    position: static;
+    left: unset;
+    transform: none;
+    flex: 1;
+    justify-content: flex-start;
+  }
+  .contact-dropdown {
+    margin-right: 0;
+    flex: 1;
+    justify-content: flex-end;
+    display: flex;
   }
   .hero {
     padding: 100px 20px 40px;
@@ -530,14 +544,18 @@ body {
   }
   .contact-btn.desktop-only { display: none; }
   .hamburger.mobile-only { display: flex; }
+  .contact-dropdown {
+    position: relative;
+  }
   .dropdown-content {
     min-width: unset;
     width: 48px;
     left: 0;
     right: auto;
-    padding: 8px 0;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    margin-left: 0;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.10);
+    padding: 4px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
