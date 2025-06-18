@@ -55,7 +55,7 @@ body {
 }
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 20px 40px;
   background-color: #FAF9F6;
@@ -64,6 +64,11 @@ body {
   top: 0;
   z-index: 1000;
   height: 80px;
+}
+.header-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 .logo {
   display: flex;
@@ -79,7 +84,10 @@ body {
   font-size: 24px;
 }
 .contact-dropdown {
-  position: relative;
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
   display: flex;
   align-items: center;
 }
@@ -139,7 +147,7 @@ body {
 .contact-dropdown .dropdown-content.show {
   display: flex;
 }
-.dropdown-content a {
+.dropdown-link {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -154,7 +162,7 @@ body {
   border: none;
   background: none;
 }
-.dropdown-content a:hover {
+.dropdown-link:hover {
   background: #f8f9fa;
 }
 .dropdown-content img {
@@ -522,6 +530,7 @@ body {
   }
   .contact-btn.desktop-only { display: none; }
   .hamburger.mobile-only { display: flex; }
+  .dropdown-text { display: none; } /* Hide text in dropdown on mobile */
 }
 @media (max-width: 900px) {
   .free-trial-form {
@@ -565,9 +574,11 @@ body {
         `}</style>
         <main>
             <header className="header">
-                <div className="logo">
-                    <Image src="/src/icons/sri-academics-logo.svg" alt="Sri Academics Logo" width={40} height={40} />
-                    <h1>Sri Academics</h1>
+                <div className="header-center">
+                    <div className="logo">
+                        <Image src="/src/icons/sri-academics-logo.svg" alt="Sri Academics Logo" width={40} height={40} />
+                        <h1>Sri Academics</h1>
+                    </div>
                 </div>
                 <div className="contact-dropdown">
                     <button className="contact-btn desktop-only">Contact Us</button>
@@ -577,13 +588,13 @@ body {
                         <span></span>
                     </button>
                     <div className="dropdown-content">
-                        <Link href="https://wa.me/8889857170" target="_blank">
+                        <Link href="https://wa.me/8889857170" target="_blank" className="dropdown-link">
                             <Image src="/src/icons/whatsapp.svg" alt="WhatsApp" width={20} height={20} />
-                            WhatsApp
+                            <span className="dropdown-text">WhatsApp</span>
                         </Link>
-                        <Link href="mailto:support@sriacademics.com">
+                        <Link href="mailto:support@sriacademics.com" className="dropdown-link">
                             <Image src="/src/icons/email.svg" alt="Email" width={20} height={20} />
-                            Email
+                            <span className="dropdown-text">Email</span>
                         </Link>
                     </div>
                 </div>
