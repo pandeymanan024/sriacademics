@@ -57,23 +57,24 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
   padding: 20px 40px;
   background-color: #FAF9F6;
-  position: fixed;
   width: 100%;
   top: 0;
   z-index: 1000;
   height: 80px;
 }
-.header-center {
+.header-left {
   flex: 1;
-  display: flex;
-  justify-content: center;
 }
 .logo {
   display: flex;
   align-items: center;
   gap: 10px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .logo img {
   height: 40px;
@@ -87,6 +88,7 @@ body {
   display: flex;
   align-items: center;
   margin-right: 40px;
+  z-index: 2;
 }
 .contact-btn {
   padding: 12px 32px;
@@ -572,6 +574,7 @@ body {
         `}</style>
         <main>
             <header className="header">
+                <div className="header-left"></div>
                 <div className="logo">
                     <Image src="/src/icons/sri-academics-logo.svg" alt="Sri Academics Logo" width={40} height={40} />
                     <h1>Sri Academics</h1>
