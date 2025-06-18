@@ -480,19 +480,25 @@ body {
 }
 @media (max-width: 768px) {
   .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 8px 10px;
     height: 54px;
+    position: relative;
   }
   .logo {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-right: 0;
-    flex: unset;
+    position: static;
+    left: unset;
+    transform: none;
+    margin: 0 auto;
   }
   .contact-dropdown {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
     margin-left: 0;
-    flex: unset;
   }
   .hero {
     padding: 100px 20px 40px;
