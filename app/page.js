@@ -612,29 +612,26 @@ body {
         `}</style>
         <main>
             <header className="header">
-                <div className="header-inner">
-                    <div className="logo">
-                        <Image src="/src/icons/sri-academics-logo.svg" alt="Sri Academics Logo" width={40} height={40} />
-                        <h1>Sri Academics</h1>
-                    </div>
-                    <div className="header-spacer" />
-                    <div className="contact-dropdown">
-                        <button className="contact-btn desktop-only">Contact Us</button>
-                        <button className="hamburger mobile-only" aria-label="Open Contact Menu">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </button>
-                        <div className="dropdown-content">
-                            <Link href="https://wa.me/8889857170" target="_blank" className="dropdown-link">
-                                <Image src="/src/icons/whatsapp.svg" alt="WhatsApp" width={20} height={20} />
-                                <span className="dropdown-text">WhatsApp</span>
-                            </Link>
-                            <Link href="mailto:support@sriacademics.com" className="dropdown-link">
-                                <Image src="/src/icons/email.svg" alt="Email" width={20} height={20} />
-                                <span className="dropdown-text">Email</span>
-                            </Link>
-                        </div>
+                <div className="logo">
+                    <Image src="/src/icons/sri-academics-logo.svg" alt="Sri Academics Logo" width={40} height={40} />
+                    <h1>Sri Academics</h1>
+                </div>
+                <div className="contact-dropdown">
+                    <button className="contact-btn desktop-only">Contact Us</button>
+                    <button className="hamburger mobile-only" aria-label="Open Contact Menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div className="dropdown-content">
+                        <Link href="https://wa.me/8889857170" target="_blank" className="dropdown-link">
+                            <Image src="/src/icons/whatsapp.svg" alt="WhatsApp" width={20} height={20} />
+                            <span className="dropdown-text">WhatsApp</span>
+                        </Link>
+                        <Link href="mailto:support@sriacademics.com" className="dropdown-link">
+                            <Image src="/src/icons/email.svg" alt="Email" width={20} height={20} />
+                            <span className="dropdown-text">Email</span>
+                        </Link>
                     </div>
                 </div>
             </header>
