@@ -57,7 +57,7 @@ body {
 .header {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   position: fixed;
   padding: 0 10px;
   background-color: #FAF9F6;
@@ -70,7 +70,7 @@ body {
 }
 .logo {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 10px;
   margin: 0 auto;
 }
@@ -80,27 +80,26 @@ body {
   display: block;
 }
 .logo h1 {
-  display: flex;
-  align-items: flex-start;
-  font-size: 24px;
   color: black;
-  line-height: 56px;
+  font-size: 24px;
   margin: 0;
+  display: flex;
+  align-items: center;
+  height: 40px;
 }
 .contact-dropdown {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   margin-right: 0;
   z-index: 2;
   height: 100%;
 }
 .contact-btn {
   height: 40px;
-  line-height: 40px;
   display: flex;
   align-items: center;
   padding: 0 32px;
-  margin-top: 0;
+  margin: 0;
   background-color: #ffb8a8;
   color: #333;
   border: none;
