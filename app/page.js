@@ -57,7 +57,7 @@ body {
 .header {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   position: fixed;
   padding: 0 10px;
   background-color: #FAF9F6;
@@ -70,7 +70,7 @@ body {
 }
 .logo {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 10px;
   margin: 0 auto;
 }
@@ -80,19 +80,16 @@ body {
   display: block;
 }
 .logo h1 {
-  color: black;
-  font-size: 24px;
-  line-height: 56px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  font-size: 24px;
+  color: black;
+  line-height: 56px;
+  margin: 0;
 }
 .contact-dropdown {
-  position: static;
-  right: unset;
-  top: unset;
-  transform: none;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   margin-right: 0;
   z-index: 2;
   height: 100%;
@@ -103,6 +100,7 @@ body {
   display: flex;
   align-items: center;
   padding: 0 32px;
+  margin-top: 0;
   background-color: #ffb8a8;
   color: #333;
   border: none;
@@ -114,7 +112,6 @@ body {
   transition: background 0.2s;
   position: relative;
   z-index: 2;
-  margin: 0;
 }
 .hamburger {
   display: none;
