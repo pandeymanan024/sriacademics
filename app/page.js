@@ -66,6 +66,7 @@ body {
   left: 0;
   z-index: 1000;
   height: 48px;
+  margin-top: 12px;
 }
 .header-spacer {
   flex: 1;
@@ -75,9 +76,6 @@ body {
   align-items: center;
   gap: 10px;
   margin: 0 auto;
-  position: static;
-  left: unset;
-  transform: none;
 }
 .logo img {
   height: 40px;
@@ -90,7 +88,7 @@ body {
 .contact-dropdown {
   display: flex;
   align-items: center;
-  margin-right: 40px;
+  margin-right: 0;
   z-index: 2;
 }
 .contact-btn {
