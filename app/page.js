@@ -66,7 +66,7 @@ body {
   left: 0;
   z-index: 1000;
   height: 48px;
-  margin-top: 12px;
+  margin-top: 0;
 }
 .header-spacer {
   flex: 1;
@@ -75,7 +75,8 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin: 0 auto;
+  margin: 0;
+  flex: 0 1 auto;
 }
 .logo img {
   height: 40px;
@@ -88,6 +89,8 @@ body {
 .contact-dropdown {
   display: flex;
   align-items: center;
+  flex: 1;
+  justify-content: flex-end;
   margin-right: 0;
   z-index: 2;
 }
@@ -489,13 +492,12 @@ body {
     display: none;
   }
   .logo {
-    margin: 0 auto;
+    flex: 1;
+    justify-content: center;
   }
   .contact-dropdown {
-    margin-left: 0;
-    margin-right: 0;
-    position: static;
-    transform: none;
+    flex: 1;
+    justify-content: flex-end;
   }
   .hero {
     padding: 100px 20px 40px;
