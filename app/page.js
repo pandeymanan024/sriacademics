@@ -65,7 +65,7 @@ body {
   top: 0;
   left: 0;
   z-index: 1000;
-  height: 48px;
+  height: 56px;
   margin-top: 0;
 }
 .logo {
@@ -77,10 +77,14 @@ body {
 .logo img {
   height: 40px;
   width: auto;
+  display: block;
 }
 .logo h1 {
   color: black;
   font-size: 24px;
+  line-height: 56px;
+  display: flex;
+  align-items: center;
 }
 .contact-dropdown {
   position: static;
@@ -94,7 +98,8 @@ body {
   height: 100%;
 }
 .contact-btn {
-  height: 36px;
+  height: 40px;
+  line-height: 40px;
   display: flex;
   align-items: center;
   padding: 0 32px;
@@ -109,6 +114,7 @@ body {
   transition: background 0.2s;
   position: relative;
   z-index: 2;
+  margin: 0;
 }
 .hamburger {
   display: none;
