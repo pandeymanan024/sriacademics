@@ -15,38 +15,60 @@ body {
 
 /* Header styles */
 .header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px 40px;
-  background-color: #FAF9F6;
-  position: fixed;
   width: 100%;
+  background: #FAF9F6;
+  position: fixed;
   top: 0;
+  left: 0;
   z-index: 1000;
-  height: 80px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  box-shadow: none;
+  padding: 0;
+}
+
+.header-inner {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  height: 56px;
+  padding: 0 24px;
 }
 
 .logo {
   display: flex;
   align-items: center;
   gap: 10px;
-}
-
-.logo img {
   height: 40px;
-  width: auto;
 }
 
 .logo h1 {
-  color: black;
   font-size: 24px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  height: 40px;
 }
 
-.header .contact-dropdown {
-  position: absolute;
-  right: 40px;
-  top: 20px;
+.header-spacer {
+  flex: 1;
+}
+
+.contact-dropdown {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  position: static;
+  margin: 0;
+}
+
+.contact-btn, .hamburger {
+  height: 40px;
+  display: flex;
+  align-items: center;
 }
 
 .contact-btn {
