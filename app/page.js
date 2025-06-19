@@ -56,7 +56,7 @@ body {
 }
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   position: fixed;
   padding: 0 10px;
@@ -68,15 +68,11 @@ body {
   height: 48px;
   margin-top: 0;
 }
-.header-spacer {
-  flex: 1;
-}
 .logo {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin: 0;
-  flex: 0 1 auto;
+  margin: 0 auto;
 }
 .logo img {
   height: 40px;
@@ -87,10 +83,12 @@ body {
   font-size: 24px;
 }
 .contact-dropdown {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
   display: flex;
   align-items: center;
-  flex: 1;
-  justify-content: flex-end;
   margin-right: 0;
   z-index: 2;
 }
@@ -488,16 +486,11 @@ body {
     height: 44px;
     padding: 0 6px;
   }
-  .header-spacer {
-    display: none;
-  }
   .logo {
-    flex: 1;
-    justify-content: center;
+    margin: 0 auto;
   }
   .contact-dropdown {
-    flex: 1;
-    justify-content: flex-end;
+    right: 6px;
   }
   .hero {
     padding: 100px 20px 40px;
