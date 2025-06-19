@@ -169,10 +169,9 @@ body {
   height: 22px;
 }
 .hero {
-  padding: 120px 0 60px 0;
+  padding: 48px 0 60px 0;
   background: #FAF9F6;
   text-align: center;
-  padding-top: 60px !important;
 }
 .hero .content {
   max-width: 900px;
@@ -497,7 +496,6 @@ body {
   }
   .hero {
     padding: 100px 20px 40px;
-    padding-top: 60px !important;
   }
   .hero h1 {
     font-size: 36px;
