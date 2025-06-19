@@ -83,17 +83,21 @@ body {
   font-size: 24px;
 }
 .contact-dropdown {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
+  position: static;
+  right: unset;
+  top: unset;
+  transform: none;
   display: flex;
   align-items: center;
   margin-right: 0;
   z-index: 2;
+  height: 100%;
 }
 .contact-btn {
-  padding: 12px 32px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  padding: 0 32px;
   background-color: #ffb8a8;
   color: #333;
   border: none;
