@@ -51,16 +51,19 @@ body {
   background-color: #FAF9F6;
   line-height: 1.6;
   color: #333;
+  margin-top: 0;
+  padding-top: 0;
 }
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
+  position: fixed;
   padding: 0 10px;
   background-color: #FAF9F6;
   width: 100%;
   top: 0;
+  left: 0;
   z-index: 1000;
   height: 48px;
 }
@@ -172,6 +175,8 @@ body {
   padding: 48px 0 60px 0;
   background: #FAF9F6;
   text-align: center;
+  margin-top: 0;
+  padding-top: 48px;
 }
 .hero .content {
   max-width: 900px;
