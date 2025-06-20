@@ -54,7 +54,9 @@ body {
   margin-top: 0;
   padding-top: 0;
 }
-/* --- NEW HEADER STYLES --- */
+/* --- HEADER ALIGNMENT FIX V3 --- */
+/* Header now has padding to match the content, ensuring the centered logo
+   and right-aligned button are always aligned with the content below. */
 .header {
   position: fixed;
   top: 0;
@@ -63,6 +65,7 @@ body {
   height: 56px;
   background-color: #FAF9F6;
   z-index: 1000;
+  padding: 0 40px; /* Desktop padding */
 }
 
 .logo {
@@ -89,11 +92,11 @@ body {
 
 .contact-dropdown {
   position: absolute;
-  right: 24px;
+  right: 40px; /* Match desktop padding */
   top: 50%;
   transform: translateY(-50%);
   z-index: 2;
-  height: auto;
+  height: auto; /* Allow content to define height */
 }
 
 .contact-btn {
@@ -101,7 +104,6 @@ body {
   display: flex;
   align-items: center;
   padding: 0 32px;
-  margin: 0;
   background-color: #ffb8a8;
   color: #333;
   border: none;
@@ -110,7 +112,6 @@ body {
   font-size: 18px;
   font-weight: 600;
   box-shadow: 0 2px 8px rgba(217, 75, 26, 0.12);
-  transition: background 0.2s;
 }
 
 .hamburger {
@@ -170,11 +171,6 @@ body {
   text-decoration: none;
   font-size: 16px;
   width: 100%;
-  justify-content: flex-start;
-  text-align: left;
-  font-weight: 500;
-  border: none;
-  background: none;
 }
 
 .dropdown-link:hover {
@@ -500,6 +496,7 @@ body {
 @media (max-width: 768px) {
   .header {
     height: 52px;
+    padding: 0 20px; /* Mobile padding */
   }
   .logo {
     gap: 8px;
@@ -511,7 +508,7 @@ body {
     font-size: 20px;
   }
   .contact-dropdown {
-    right: 16px;
+    right: 20px; /* Match mobile padding */
   }
   .contact-btn.desktop-only { display: none; }
   .hamburger.mobile-only { display: flex; }
@@ -520,7 +517,6 @@ body {
     min-width: unset;
     width: 48px;
     border-radius: 6px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.10);
     padding: 4px 0;
     align-items: center;
   }
