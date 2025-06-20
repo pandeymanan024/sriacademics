@@ -518,18 +518,13 @@ body {
   }
   .student-image {
     width: 100%;
-    max-width: 320px;
-    margin: 0 auto 24px auto;
-    display: flex;
-    justify-content: center;
+    margin-bottom: 24px;
   }
-  .student-image img, .student-image > :global(img) {
-    max-width: 100%;
+  .student-image img {
+    width: 100%;
     height: auto;
-    border-radius: 16px;
-    margin-left: auto;
-    margin-right: auto;
     display: block;
+    object-fit: cover;
   }
   .hero {
     padding: 48px 20px;
