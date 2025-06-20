@@ -52,8 +52,10 @@ body {
   line-height: 1.6;
   color: #333;
   padding-top: 56px;
+  overflow-x: hidden;
+  max-width: 100vw;
 }
-/* --- GRID-BASED HEADER - FINAL FIX --- */
+/* --- GRID-BASED HEADER - FINAL FIX V2 --- */
 .header {
   position: fixed;
   top: 0;
@@ -74,6 +76,7 @@ body {
   align-items: center;
   gap: 10px;
   justify-self: center; /* Center logo in its grid area */
+  min-width: 0; /* Allow logo to shrink if needed */
 }
 
 .logo img {
@@ -86,6 +89,7 @@ body {
   color: black;
   font-size: 24px;
   margin: 0;
+  white-space: nowrap; /* Prevent text from wrapping */
 }
 
 .contact-dropdown {
@@ -152,7 +156,6 @@ body {
   padding: 8px 0;
 }
 
-.contact-dropdown:hover .dropdown-content,
 .contact-dropdown .dropdown-content.show {
   display: flex;
 }
@@ -564,9 +567,9 @@ body {
     text-align: center;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 420px) {
   .logo h1 {
-    display: none; /* Hide text on very small screens to prevent overlap */
+    display: none;
   }
 }
 .message {
