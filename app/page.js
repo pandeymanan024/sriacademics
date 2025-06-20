@@ -51,12 +51,9 @@ body {
   background-color: #FAF9F6;
   line-height: 1.6;
   color: #333;
-  margin-top: 0;
-  padding-top: 0;
+  padding-top: 56px;
 }
-/* --- HEADER ALIGNMENT FIX V3 --- */
-/* Header now has padding to match the content, ensuring the centered logo
-   and right-aligned button are always aligned with the content below. */
+/* --- GRID-BASED HEADER - FINAL FIX --- */
 .header {
   position: fixed;
   top: 0;
@@ -65,17 +62,18 @@ body {
   height: 56px;
   background-color: #FAF9F6;
   z-index: 1000;
-  padding: 0 40px; /* Desktop padding */
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
 }
 
 .logo {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  grid-column: 2;
   display: flex;
   align-items: center;
   gap: 10px;
+  justify-self: center; /* Center logo in its grid area */
 }
 
 .logo img {
@@ -91,12 +89,9 @@ body {
 }
 
 .contact-dropdown {
-  position: absolute;
-  right: 40px; /* Match desktop padding */
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 2;
-  height: auto; /* Allow content to define height */
+  grid-column: 3;
+  justify-self: end; /* Align to the right edge of the grid area */
+  position: relative; /* For dropdown positioning */
 }
 
 .contact-btn {
@@ -145,7 +140,7 @@ body {
 .dropdown-content {
   display: none;
   position: absolute;
-  top: 110%; /* Place it below the button */
+  top: 110%;
   right: 0;
   background-color: white;
   min-width: 140px;
@@ -181,17 +176,16 @@ body {
   width: 22px;
   height: 22px;
 }
-
+/* All other sections remain the same */
 .hero {
   padding: 48px 0 60px 0;
   background: #FAF9F6;
   text-align: center;
-  margin-top: 0;
-  padding-top: 48px;
 }
 .hero .content {
   max-width: 900px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 .hero h1 {
   font-size: 56px;
@@ -461,7 +455,7 @@ body {
 }
 .faq-item.active .faq-answer {
   padding: 20px;
-  max-height: 500px; /* Adjust this value as needed to be larger than any possible answer */
+  max-height: 500px;
 }
 .footer {
   background-color: #333;
@@ -494,25 +488,14 @@ body {
   text-decoration: none;
 }
 @media (max-width: 768px) {
-  .header {
-    height: 52px;
-    padding: 0 20px; /* Mobile padding */
-  }
-  .logo {
-    gap: 8px;
-  }
   .logo img {
     height: 32px;
   }
   .logo h1 {
     font-size: 20px;
   }
-  .contact-dropdown {
-    right: 20px; /* Match mobile padding */
-  }
   .contact-btn.desktop-only { display: none; }
   .hamburger.mobile-only { display: flex; }
-
   .dropdown-content {
     min-width: unset;
     width: 48px;
@@ -546,42 +529,32 @@ body {
     display: block;
   }
   .hero {
-    padding: 100px 20px 40px;
+    padding: 48px 20px;
   }
-  .hero h1 {
-    font-size: 36px;
-  }
-  .hero p {
-    font-size: 18px;
-  }
-  .hero h2 {
-    font-size: 28px;
-  }
+  .hero h1 { font-size: 36px; }
+  .hero p { font-size: 18px; }
+  .hero h2 { font-size: 28px; }
+
   .free-trial-form {
-    padding: 20px;
+    grid-template-columns: 1fr;
+    padding: 0;
   }
-  .commitment-section {
+  .free-trial-form button {
+    grid-column: 1;
+  }
+  
+  .commitment-section, .video-section, .benefits-section, .testimonials-section, .faq-section {
     padding: 40px 20px;
   }
   .commitment-content {
     flex-direction: column;
   }
-  .commitment-section h2 {
+  .commitment-section h2, .programs-title, .video-container h2, .benefits-section h2, .testimonials-section h2, .faq-section h2 {
     font-size: 28px;
   }
-  .programs-title {
-    font-size: 28px;
-  }
-  .video-section,
-  .benefits-section,
-  .testimonials-section,
-  .faq-section {
-    padding: 40px 20px;
-  }
-  .benefits-section h2,
-  .testimonials-section h2,
-  .faq-section h2 {
-    font-size: 28px;
+  
+  .benefits-grid {
+    grid-template-columns: 1fr;
   }
   .footer {
     padding: 20px;
@@ -591,20 +564,9 @@ body {
     text-align: center;
   }
 }
-@media (max-width: 900px) {
-  .free-trial-form {
-    grid-template-columns: 1fr;
-  }
-  .free-trial-form button {
-    grid-column: 1;
-  }
-  .benefits-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 600px) {
-  .benefits-grid {
-    grid-template-columns: 1fr;
+@media (max-width: 400px) {
+  .logo h1 {
+    display: none; /* Hide text on very small screens to prevent overlap */
   }
 }
 .message {
@@ -613,19 +575,16 @@ body {
     border-radius: 4px;
     text-align: center;
 }
-
 .message.error {
     background-color: #ffebee;
     color: #c62828;
     border: 1px solid #ffcdd2;
 }
-
 .message.success {
     background-color: #e8f5e9;
     color: #2e7d32;
     border: 1px solid #c8e6c9;
 }
-
 .free-trial-form button:disabled {
     opacity: 0.7;
     cursor: not-allowed;
