@@ -54,46 +54,48 @@ body {
   margin-top: 0;
   padding-top: 0;
 }
+/* --- NEW HEADER STYLES --- */
 .header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: fixed;
-  padding: 0 10px;
-  background-color: #FAF9F6;
-  width: 100%;
   top: 0;
   left: 0;
-  z-index: 1000;
+  width: 100%;
   height: 56px;
-  margin-top: 0;
+  background-color: #FAF9F6;
+  z-index: 1000;
 }
+
 .logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
   gap: 10px;
-  margin: 0 auto;
 }
+
 .logo img {
   height: 40px;
   width: auto;
   display: block;
 }
+
 .logo h1 {
   color: black;
   font-size: 24px;
   margin: 0;
-  display: flex;
-  align-items: center;
-  height: 40px;
 }
+
 .contact-dropdown {
-  display: flex;
-  align-items: center;
-  margin-right: 0;
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
   z-index: 2;
-  height: 100%;
+  height: auto;
 }
+
 .contact-btn {
   height: 40px;
   display: flex;
@@ -109,9 +111,8 @@ body {
   font-weight: 600;
   box-shadow: 0 2px 8px rgba(217, 75, 26, 0.12);
   transition: background 0.2s;
-  position: relative;
-  z-index: 2;
 }
+
 .hamburger {
   display: none;
   flex-direction: column;
@@ -124,6 +125,7 @@ body {
   cursor: pointer;
   gap: 5px;
 }
+
 .hamburger span {
   display: block;
   width: 28px;
@@ -131,16 +133,19 @@ body {
   background: #333;
   border-radius: 2px;
 }
+
 .desktop-only { display: block; }
 .mobile-only { display: none; }
+
 .contact-btn:hover {
   background-color: #ffa48d;
 }
+
 .dropdown-content {
   display: none;
   position: absolute;
-  left: 0;
-  top: 100%;
+  top: 110%; /* Place it below the button */
+  right: 0;
   background-color: white;
   min-width: 140px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.12);
@@ -150,10 +155,12 @@ body {
   align-items: flex-start;
   padding: 8px 0;
 }
+
 .contact-dropdown:hover .dropdown-content,
 .contact-dropdown .dropdown-content.show {
   display: flex;
 }
+
 .dropdown-link {
   display: flex;
   align-items: center;
@@ -169,13 +176,16 @@ body {
   border: none;
   background: none;
 }
+
 .dropdown-link:hover {
   background: #f8f9fa;
 }
+
 .dropdown-content img {
   width: 22px;
   height: 22px;
 }
+
 .hero {
   padding: 48px 0 60px 0;
   background: #FAF9F6;
@@ -489,45 +499,40 @@ body {
 }
 @media (max-width: 768px) {
   .header {
-    height: 44px;
-    padding: 0 6px;
+    height: 52px;
   }
   .logo {
-    margin: 0 auto;
+    gap: 8px;
+  }
+  .logo img {
+    height: 32px;
+  }
+  .logo h1 {
+    font-size: 20px;
   }
   .contact-dropdown {
-    right: 6px;
-    top: 0;
-    height: 44px;
-    position: absolute;
-    display: flex;
-    align-items: center;
+    right: 16px;
   }
-  .contact-btn.desktop-only { display: none !important; }
-  .hamburger.mobile-only { display: flex !important; }
+  .contact-btn.desktop-only { display: none; }
+  .hamburger.mobile-only { display: flex; }
+
   .dropdown-content {
     min-width: unset;
     width: 48px;
-    left: 0;
-    right: auto;
-    margin-left: 0;
     border-radius: 6px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.10);
     padding: 4px 0;
-    flex-direction: column;
     align-items: center;
-    display: none;
   }
   .dropdown-content.show {
-    display: flex !important;
+    display: flex;
   }
   .dropdown-link {
     justify-content: center;
-    text-align: center;
     padding: 8px 0;
   }
   .dropdown-text {
-    display: none !important;
+    display: none;
   }
   .student-image {
     width: 100%;
