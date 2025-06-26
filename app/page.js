@@ -723,7 +723,7 @@ body {
                             </div>
                             <h3 className="testimonial-name">Student {num}</h3>
                             <p className="testimonial-grade">Grade: {num + 7} | CBSE</p>
-                            <p className="testimonial-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <p className="testimonial-text">Studying Computer Science with Sri Academics has been a great experience. The customized classes really helped me understand the topics at my own pace, and the teaching style was very student-friendly. What made it even better was the flexible class timings, which allowed me to manage my school workload without any stress. It made learning much easier and more effective for me.</p>
                         </div>
                     ))}
                 </div>
