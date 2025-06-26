@@ -716,16 +716,54 @@ body {
             <section className="testimonials-section">
                 <h2>Student's Testimonials</h2>
                 <div className="testimonials-grid">
-                    {[1, 2, 3, 4, 5, 6].map((num) => (
-                        <div key={num} className="testimonial-card">
-                            <div className="testimonial-image">
-                                <Image src="/src/icons/notes.svg" alt={`Student ${num}`} width={80} height={80} />
-                            </div>
-                            <h3 className="testimonial-name">Student {num}</h3>
-                            <p className="testimonial-grade">Grade: {num + 7} | CBSE</p>
-                            <p className="testimonial-text">Studying Computer Science with Sri Academics has been a great experience. The customized classes really helped me understand the topics at my own pace, and the teaching style was very student-friendly. What made it even better was the flexible class timings, which allowed me to manage my school workload without any stress. It made learning much easier and more effective for me.</p>
+                    <div className="testimonial-card">
+                        <div className="testimonial-image">
+                            <Image src="/src/icons/notes.svg" alt="Sai Shreya" width={80} height={80} />
                         </div>
-                    ))}
+                        <h3 className="testimonial-name">Sai Shreya</h3>
+                        <p className="testimonial-grade">Grade: 8 | CBSE NEET</p>
+                        <p className="testimonial-text">Studying Computer Science with Sri Academics has been a great experience. The customized classes really helped me understand the topics at my own pace, and the teaching style was very student-friendly. What made it even better was the flexible class timings, which allowed me to manage my school workload without any stress. It made learning much easier and more effective for me.</p>
+                    </div>
+                    <div className="testimonial-card">
+                        <div className="testimonial-image">
+                            <Image src="/src/icons/notes.svg" alt="Pradeep Krupanandan" width={80} height={80} />
+                        </div>
+                        <h3 className="testimonial-name">Pradeep Krupanandan</h3>
+                        <p className="testimonial-grade">Grade: 3 | CBSE, NEET</p>
+                        <p className="testimonial-text">Sri Academics has been a blessing for my child. The tutors are very patient and knowledgeable. My son has shown remarkable improvement in his studies and is now more confident in class. The one-on-one attention makes a huge difference!</p>
+                    </div>
+                    <div className="testimonial-card">
+                        <div className="testimonial-image">
+                            <Image src="/src/icons/notes.svg" alt="Mishika" width={80} height={80} />
+                        </div>
+                        <h3 className="testimonial-name">Mishika</h3>
+                        <p className="testimonial-grade">Grade: 10 | CBSE, IIT-JEE</p>
+                        <p className="testimonial-text">The teachers at Sri Academics are amazing! They helped me prepare for my board exams and IIT-JEE. The classes are interactive and the study material is very helpful. I highly recommend them to anyone looking for quality tutoring.</p>
+                    </div>
+                    <div className="testimonial-card">
+                        <div className="testimonial-image">
+                            <Image src="/src/icons/notes.svg" alt="Pranavi Reddy" width={80} height={80} />
+                        </div>
+                        <h3 className="testimonial-name">Pranavi Reddy</h3>
+                        <p className="testimonial-grade">Grade: 7 | CBSE NEET</p>
+                        <p className="testimonial-text">I love the way the tutors explain difficult concepts in a simple manner. The personalized approach has helped me improve my grades and develop a genuine interest in learning. Thank you, Sri Academics!</p>
+                    </div>
+                    <div className="testimonial-card">
+                        <div className="testimonial-image">
+                            <Image src="/src/icons/notes.svg" alt="Sabarish R" width={80} height={80} />
+                        </div>
+                        <h3 className="testimonial-name">Sabarish R</h3>
+                        <p className="testimonial-grade">Grade: 9 | CBSE Board</p>
+                        <p className="testimonial-text">The flexibility of class timings and the dedication of the tutors at Sri Academics have made my learning journey smooth and enjoyable. I feel more prepared for my exams and have gained a lot of confidence.</p>
+                    </div>
+                    <div className="testimonial-card">
+                        <div className="testimonial-image">
+                            <Image src="/src/icons/notes.svg" alt="Zarka Khan" width={80} height={80} />
+                        </div>
+                        <h3 className="testimonial-name">Zarka Khan</h3>
+                        <p className="testimonial-grade">Grade: 12 | CBSE</p>
+                        <p className="testimonial-text">Sri Academics has helped me achieve my academic goals. The tutors are supportive and always available to clear my doubts. I am grateful for their guidance and encouragement throughout my studies.</p>
+                    </div>
                 </div>
             </section>
 
