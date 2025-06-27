@@ -634,7 +634,7 @@ export default function Home() {
             </button>
             <div className="dropdown-content">
               <Link
-                href="https://wa.me/8889857170"
+                href="https://wa.me/+917772094431?text=interested"
                 target="_blank"
                 className="dropdown-link"
               >
