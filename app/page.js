@@ -1050,7 +1050,7 @@ export default function Home() {
                 />
               </Link>
               <Link
-                href="https://www.youtube.com/@mananpandey940"
+                href="https://www.youtube.com/@sriacademics?si=5BdTaXoxSTQ6jwQO"
                 target="_blank"
                 className="social-icon"
               >
