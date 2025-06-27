@@ -980,7 +980,7 @@ export default function Home() {
             </div>
             <div className="faq-item">
               <div className="faq-question">
-                WHAT COURSES DO WE OFFER?
+                What courses do we offer?
                 <span className="faq-toggle">&#9660;</span>
               </div>
               <div className="faq-answer">
