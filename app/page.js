@@ -830,7 +830,7 @@ export default function Home() {
                   height={80}
                 />
               </div>
-              <h3 className="testimonial-name">Ritesh</h3>
+              <h3 className="testimonial-name">Naman Joshi</h3>
               <p className="testimonial-grade">Grade: 11 | CBSE</p>
               <p className="testimonial-text">
                 Studying Computer Science with Sri Academics has been a great
